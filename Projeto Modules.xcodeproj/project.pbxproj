@@ -17,7 +17,6 @@
 		232C4DF6175A2F1D00C5CDC4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 232C4DF5175A2F1D00C5CDC4 /* Default@2x.png */; };
 		232C4DF8175A2F1D00C5CDC4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 232C4DF7175A2F1D00C5CDC4 /* Default-568h@2x.png */; };
 		232C4DFB175A2F1D00C5CDC4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232C4DF9175A2F1D00C5CDC4 /* MainStoryboard.storyboard */; };
-		232C4DFE175A2F1D00C5CDC4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4DFD175A2F1D00C5CDC4 /* FirstViewController.m */; };
 		232C4E00175A2F1E00C5CDC4 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 232C4DFF175A2F1E00C5CDC4 /* first.png */; };
 		232C4E02175A2F1E00C5CDC4 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 232C4E01175A2F1E00C5CDC4 /* first@2x.png */; };
 		232C4E05175A2F1E00C5CDC4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E04175A2F1E00C5CDC4 /* SecondViewController.m */; };
@@ -66,8 +65,6 @@
 		232C4DF5175A2F1D00C5CDC4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		232C4DF7175A2F1D00C5CDC4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		232C4DFA175A2F1D00C5CDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		232C4DFC175A2F1D00C5CDC4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		232C4DFD175A2F1D00C5CDC4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		232C4DFF175A2F1E00C5CDC4 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		232C4E01175A2F1E00C5CDC4 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		232C4E03175A2F1E00C5CDC4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -167,8 +164,6 @@
 				232C4DF0175A2F1D00C5CDC4 /* AppDelegate.h */,
 				232C4DF1175A2F1D00C5CDC4 /* AppDelegate.m */,
 				232C4DF9175A2F1D00C5CDC4 /* MainStoryboard.storyboard */,
-				232C4DFC175A2F1D00C5CDC4 /* FirstViewController.h */,
-				232C4DFD175A2F1D00C5CDC4 /* FirstViewController.m */,
 				232C4DFF175A2F1E00C5CDC4 /* first.png */,
 				232C4E01175A2F1E00C5CDC4 /* first@2x.png */,
 				232C4E03175A2F1E00C5CDC4 /* SecondViewController.h */,
@@ -402,7 +397,6 @@
 			files = (
 				232C4DEE175A2F1D00C5CDC4 /* main.m in Sources */,
 				232C4DF2175A2F1D00C5CDC4 /* AppDelegate.m in Sources */,
-				232C4DFE175A2F1D00C5CDC4 /* FirstViewController.m in Sources */,
 				232C4E05175A2F1E00C5CDC4 /* SecondViewController.m in Sources */,
 				232C4E3F175A2FE800C5CDC4 /* EGOCache+PGCache.m in Sources */,
 				232C4E40175A2FE800C5CDC4 /* NSDate+PGDate.m in Sources */,
@@ -538,6 +532,7 @@
 				232C4E0E175A2F1E00C5CDC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
