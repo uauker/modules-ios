@@ -124,7 +124,7 @@
     
     sourceView.text = pgNews.siteTitle;
     textView.text = pgNews.title;
-    dateView.text = [pgNews.createdAt humanIntervalSinceNow];
+    dateView.text = [pgNews.createdAt humanIntervalAgoSinceNow];
     
     return cell;
 }
