@@ -17,9 +17,14 @@
 
 @property (nonatomic, copy) NSString *site;
 @property (nonatomic, copy) NSString *navTitle;
+
+//
+
 @property (nonatomic, strong) UIColor *tableBackgroundColor;
 @property (nonatomic) float minimumTimeInSeconds;
 @property (nonatomic) int cacheTimeInSeconds;
+
+//
 
 @property (nonatomic, strong) UITableView *tableView;
 
