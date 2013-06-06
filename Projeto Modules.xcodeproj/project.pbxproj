@@ -52,10 +52,6 @@
 		23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810D9F175BA08D001676CD /* MyAppsViewController.m */; };
 		23810DA2175BA246001676CD /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
 		23810DA5175BA913001676CD /* PGApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810DA4175BA913001676CD /* PGApps.m */; };
-		23810DAC175BB183001676CD /* com.uauker.apps.cinelandia in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA7175BB183001676CD /* com.uauker.apps.cinelandia */; };
-		23810DAD175BB183001676CD /* com.uauker.apps.transitobh in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA8175BB183001676CD /* com.uauker.apps.transitobh */; };
-		23810DAE175BB183001676CD /* com.uauker.apps.transitorio in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA9175BB183001676CD /* com.uauker.apps.transitorio */; };
-		23810DAF175BB183001676CD /* com.uauker.apps.transitosp in Resources */ = {isa = PBXBuildFile; fileRef = 23810DAA175BB183001676CD /* com.uauker.apps.transitosp */; };
 		23810DB0175BB183001676CD /* MyAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DAB175BB183001676CD /* MyAppCell.xib */; };
 		23810DB2175BB271001676CD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23810DB1175BB271001676CD /* ImageIO.framework */; };
 /* End PBXBuildFile section */
@@ -126,10 +122,6 @@
 		23810DA1175BA246001676CD /* MyApps.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyApps.xib; sourceTree = "<group>"; };
 		23810DA3175BA913001676CD /* PGApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGApps.h; sourceTree = "<group>"; };
 		23810DA4175BA913001676CD /* PGApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGApps.m; sourceTree = "<group>"; };
-		23810DA7175BB183001676CD /* com.uauker.apps.cinelandia */ = {isa = PBXFileReference; lastKnownFileType = file; path = com.uauker.apps.cinelandia; sourceTree = "<group>"; };
-		23810DA8175BB183001676CD /* com.uauker.apps.transitobh */ = {isa = PBXFileReference; lastKnownFileType = file; path = com.uauker.apps.transitobh; sourceTree = "<group>"; };
-		23810DA9175BB183001676CD /* com.uauker.apps.transitorio */ = {isa = PBXFileReference; lastKnownFileType = file; path = com.uauker.apps.transitorio; sourceTree = "<group>"; };
-		23810DAA175BB183001676CD /* com.uauker.apps.transitosp */ = {isa = PBXFileReference; lastKnownFileType = file; path = com.uauker.apps.transitosp; sourceTree = "<group>"; };
 		23810DAB175BB183001676CD /* MyAppCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAppCell.xib; sourceTree = "<group>"; };
 		23810DB1175BB271001676CD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -342,7 +334,6 @@
 		23810D9D175BA001001676CD /* MyApps */ = {
 			isa = PBXGroup;
 			children = (
-				23810DA6175BB183001676CD /* images */,
 				23810DAB175BB183001676CD /* MyAppCell.xib */,
 				23810D9E175BA08D001676CD /* MyAppsViewController.h */,
 				23810D9F175BA08D001676CD /* MyAppsViewController.m */,
@@ -351,17 +342,6 @@
 				23810DA4175BA913001676CD /* PGApps.m */,
 			);
 			path = MyApps;
-			sourceTree = "<group>";
-		};
-		23810DA6175BB183001676CD /* images */ = {
-			isa = PBXGroup;
-			children = (
-				23810DA7175BB183001676CD /* com.uauker.apps.cinelandia */,
-				23810DA8175BB183001676CD /* com.uauker.apps.transitobh */,
-				23810DA9175BB183001676CD /* com.uauker.apps.transitorio */,
-				23810DAA175BB183001676CD /* com.uauker.apps.transitosp */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,10 +418,6 @@
 				232C4E61175A303C00C5CDC4 /* PGNewsCell.xib in Resources */,
 				232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */,
 				23810DA2175BA246001676CD /* MyApps.xib in Resources */,
-				23810DAC175BB183001676CD /* com.uauker.apps.cinelandia in Resources */,
-				23810DAD175BB183001676CD /* com.uauker.apps.transitobh in Resources */,
-				23810DAE175BB183001676CD /* com.uauker.apps.transitorio in Resources */,
-				23810DAF175BB183001676CD /* com.uauker.apps.transitosp in Resources */,
 				23810DB0175BB183001676CD /* MyAppCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
