@@ -97,7 +97,7 @@
     UILabel *nameApp = (UILabel *) [cell viewWithTag:2];
     UILabel *category = (UILabel *) [cell viewWithTag:3];
     
-    imageView.image = [UIImage imageNamed:app.bundle];
+    [imageView setImageWithURL:[NSURL URLWithString:app.icon]];
     imageView.layer.cornerRadius = 10.0;
     imageView.layer.masksToBounds = YES;
     
@@ -123,7 +123,7 @@
     
     NSString *url = app.url;
     
-    NSString *scheme = [[self.apps objectAtIndex:[indexPath row]] objectForKey:@"bundle"];
+    NSString *scheme = app.bundle;
     scheme = [[scheme componentsSeparatedByString:@"."] lastObject];
     scheme = [NSString stringWithFormat:@"%@://", scheme];
     

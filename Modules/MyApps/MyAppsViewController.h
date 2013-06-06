@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "EGOCache+PGCache.h"
 #import "PGApps.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define URL_HEROKU_MY_APPS @"http://www.uauker.com/api/apps/v1/ios.json"
 

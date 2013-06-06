@@ -15,6 +15,7 @@
     
     if (self) {
         self.name = [dictionary objectForKey:@"name"];
+        self.icon = [dictionary objectForKey:@"icon"];
         self.category = [dictionary objectForKey:@"category"];
         self.bundle = [dictionary objectForKey:@"bundle"];
         self.url = [dictionary objectForKey:@"url"];

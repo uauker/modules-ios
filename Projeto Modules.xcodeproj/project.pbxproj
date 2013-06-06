@@ -48,6 +48,7 @@
 		232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232C4E5D175A303C00C5CDC4 /* TelaDeNews.xib */; };
 		232C4E63175A303C00C5CDC4 /* TelaDeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */; };
 		232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
+		236A46C51760099F00AED2E1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A46C41760099F00AED2E1 /* SDWebImage.framework */; };
 		23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810D9F175BA08D001676CD /* MyAppsViewController.m */; };
 		23810DA2175BA246001676CD /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
 		23810DA5175BA913001676CD /* PGApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810DA4175BA913001676CD /* PGApps.m */; };
@@ -119,6 +120,7 @@
 		232C4E5E175A303C00C5CDC4 /* TelaDeNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaDeNewsViewController.h; sourceTree = "<group>"; };
 		232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaDeNewsViewController.m; sourceTree = "<group>"; };
 		232C4E64175A321900C5CDC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		236A46C41760099F00AED2E1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		23810D9E175BA08D001676CD /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
 		23810D9F175BA08D001676CD /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
 		23810DA1175BA246001676CD /* MyApps.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyApps.xib; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				232C4DE2175A2F1D00C5CDC4 /* UIKit.framework in Frameworks */,
 				232C4DE4175A2F1D00C5CDC4 /* Foundation.framework in Frameworks */,
 				232C4DE6175A2F1D00C5CDC4 /* CoreGraphics.framework in Frameworks */,
+				236A46C51760099F00AED2E1 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +230,7 @@
 		232C4E16175A2FE700C5CDC4 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				236A46C41760099F00AED2E1 /* SDWebImage.framework */,
 				232C4E17175A2FE700C5CDC4 /* EGOCache */,
 				232C4E1B175A2FE700C5CDC4 /* JSONKit */,
 				232C4E20175A2FE700C5CDC4 /* NSDate-HumanInterval */,
@@ -550,9 +554,14 @@
 		232C4E0D175A2F1E00C5CDC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Projeto Modules/Projeto Modules-Prefix.pch";
 				INFOPLIST_FILE = "Projeto Modules/Projeto Modules-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -561,9 +570,14 @@
 		232C4E0E175A2F1E00C5CDC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Projeto Modules/Projeto Modules-Prefix.pch";
 				INFOPLIST_FILE = "Projeto Modules/Projeto Modules-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
