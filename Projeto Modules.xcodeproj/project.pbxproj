@@ -48,6 +48,10 @@
 		232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232C4E5D175A303C00C5CDC4 /* TelaDeNews.xib */; };
 		232C4E63175A303C00C5CDC4 /* TelaDeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */; };
 		232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
+		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
+		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
+		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
+		2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55F176C086C007FF38A /* TTTweet+Parse.m */; };
 		236A46C51760099F00AED2E1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A46C41760099F00AED2E1 /* SDWebImage.framework */; };
 		23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810D9F175BA08D001676CD /* MyAppsViewController.m */; };
 		23810DA2175BA246001676CD /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
@@ -61,6 +65,8 @@
 		238FF94A176AA4110080D544 /* STTwitterOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF93F176AA4110080D544 /* STTwitterOAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		238FF94B176AA4110080D544 /* STTwitterOAuthOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF941176AA4110080D544 /* STTwitterOAuthOSX.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		238FF94C176AA4110080D544 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF945176AA4110080D544 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		238FF950176AA6190080D544 /* TwitterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF94F176AA6190080D544 /* TwitterListViewController.m */; };
+		238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FF951176AAA8E0080D544 /* TwitterListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +129,14 @@
 		232C4E5E175A303C00C5CDC4 /* TelaDeNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaDeNewsViewController.h; sourceTree = "<group>"; };
 		232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaDeNewsViewController.m; sourceTree = "<group>"; };
 		232C4E64175A321900C5CDC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2346A555176BF44B007FF38A /* TTTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweet.h; sourceTree = "<group>"; };
+		2346A556176BF44B007FF38A /* TTTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweet.m; sourceTree = "<group>"; };
+		2346A557176BF44B007FF38A /* TTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUser.h; sourceTree = "<group>"; };
+		2346A558176BF44B007FF38A /* TTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUser.m; sourceTree = "<group>"; };
+		2346A55B176BF751007FF38A /* TTUser+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTUser+Parse.h"; sourceTree = "<group>"; };
+		2346A55C176BF751007FF38A /* TTUser+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTUser+Parse.m"; sourceTree = "<group>"; };
+		2346A55E176C086C007FF38A /* TTTweet+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTTweet+Parse.h"; sourceTree = "<group>"; };
+		2346A55F176C086C007FF38A /* TTTweet+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTTweet+Parse.m"; sourceTree = "<group>"; };
 		236A46C41760099F00AED2E1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		23810D9E175BA08D001676CD /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
 		23810D9F175BA08D001676CD /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
@@ -146,6 +160,9 @@
 		238FF942176AA4110080D544 /* STTwitterOAuthProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterOAuthProtocol.h; sourceTree = "<group>"; };
 		238FF944176AA4110080D544 /* STHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
 		238FF945176AA4110080D544 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
+		238FF94E176AA6190080D544 /* TwitterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterListViewController.h; sourceTree = "<group>"; };
+		238FF94F176AA6190080D544 /* TwitterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterListViewController.m; sourceTree = "<group>"; };
+		238FF951176AAA8E0080D544 /* TwitterListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +372,21 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		2346A54E176BF3BE007FF38A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2346A555176BF44B007FF38A /* TTTweet.h */,
+				2346A556176BF44B007FF38A /* TTTweet.m */,
+				2346A557176BF44B007FF38A /* TTUser.h */,
+				2346A558176BF44B007FF38A /* TTUser.m */,
+				2346A55B176BF751007FF38A /* TTUser+Parse.h */,
+				2346A55C176BF751007FF38A /* TTUser+Parse.m */,
+				2346A55E176C086C007FF38A /* TTTweet+Parse.h */,
+				2346A55F176C086C007FF38A /* TTTweet+Parse.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		23810D9D175BA001001676CD /* MyApps */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +433,10 @@
 		238FF94D176AA4490080D544 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				2346A54E176BF3BE007FF38A /* models */,
+				238FF94E176AA6190080D544 /* TwitterListViewController.h */,
+				238FF94F176AA6190080D544 /* TwitterListViewController.m */,
+				238FF951176AAA8E0080D544 /* TwitterListView.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -480,6 +516,7 @@
 				232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */,
 				23810DA2175BA246001676CD /* MyApps.xib in Resources */,
 				23810DB0175BB183001676CD /* MyAppCell.xib in Resources */,
+				238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +551,11 @@
 				238FF94A176AA4110080D544 /* STTwitterOAuth.m in Sources */,
 				238FF94B176AA4110080D544 /* STTwitterOAuthOSX.m in Sources */,
 				238FF94C176AA4110080D544 /* STHTTPRequest.m in Sources */,
+				238FF950176AA6190080D544 /* TwitterListViewController.m in Sources */,
+				2346A559176BF44B007FF38A /* TTTweet.m in Sources */,
+				2346A55A176BF44B007FF38A /* TTUser.m in Sources */,
+				2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */,
+				2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
