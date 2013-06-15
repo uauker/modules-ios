@@ -45,7 +45,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
                 
-                [twitter getUserListWithListName:@"transito-rj" ownerScreenName:@"uauker" successBlock:^(NSArray *statuses) {
+                [twitter getUserListWithListName:vc.listname ownerScreenName:vc.username successBlock:^(NSArray *statuses) {
                     for (NSDictionary *dictionary in statuses) {
                         TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
                         [tmpTweets addObject:tweet];

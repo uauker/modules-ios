@@ -151,6 +151,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wjy-n4-dv6"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="username" value="uauker"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="listname" value="transito-rj"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2g-rl-1Jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
