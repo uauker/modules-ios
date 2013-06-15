@@ -51,6 +51,8 @@
                         [tmpTweets addObject:tweet];
                     }
                     
+                    vc.tweets = tmpTweets;
+                    
                     [vc.tableView reloadData];
                 } errorBlock:^(NSError *error) {
                     //TODO: deu problema, e ai?
@@ -61,10 +63,6 @@
             });
         });
     }];
-    
-    if (tmpTweets) {
-        self.tweets = tmpTweets;
-    }
     
     [self.tableView triggerPullToRefresh];
 }
@@ -86,14 +84,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"PGNewsCell";
+    static NSString *cellIdentifier = @"TweetCustomCell";
     
-    UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    TweetCustomCell *cell = (TweetCustomCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
     	NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
-    	cell = (UITableViewCell *)[nib objectAtIndex:0];
+    	cell = (TweetCustomCell *)[nib objectAtIndex:0];
     }
+    
+    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+    
+    [cell setTweet:tweet];
+    [cell load];
     
     return cell;
 }

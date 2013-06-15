@@ -11,6 +11,7 @@
 #import "STTwitterAPIWrapper.h"
 #import "TTUser+Parse.h"
 #import "TTTweet+Parse.h"
+#import "TweetCustomCell.h"
 
 #define K_TWITTER_CONSUMER_NAME @"Trânsito Rio"
 #define K_TWITTER_CONSUMER_KEY @"WPDngmoDgU7SgRinKG5A"

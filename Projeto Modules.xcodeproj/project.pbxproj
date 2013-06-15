@@ -52,6 +52,8 @@
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
 		2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55F176C086C007FF38A /* TTTweet+Parse.m */; };
+		2346A564176C155F007FF38A /* TweetCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A562176C155E007FF38A /* TweetCustomCell.m */; };
+		2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2346A563176C155F007FF38A /* TweetCustomCell.xib */; };
 		236A46C51760099F00AED2E1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A46C41760099F00AED2E1 /* SDWebImage.framework */; };
 		23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810D9F175BA08D001676CD /* MyAppsViewController.m */; };
 		23810DA2175BA246001676CD /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
@@ -137,6 +139,9 @@
 		2346A55C176BF751007FF38A /* TTUser+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTUser+Parse.m"; sourceTree = "<group>"; };
 		2346A55E176C086C007FF38A /* TTTweet+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTTweet+Parse.h"; sourceTree = "<group>"; };
 		2346A55F176C086C007FF38A /* TTTweet+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTTweet+Parse.m"; sourceTree = "<group>"; };
+		2346A561176C155E007FF38A /* TweetCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCustomCell.h; sourceTree = "<group>"; };
+		2346A562176C155E007FF38A /* TweetCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCustomCell.m; sourceTree = "<group>"; };
+		2346A563176C155F007FF38A /* TweetCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCustomCell.xib; sourceTree = "<group>"; };
 		236A46C41760099F00AED2E1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		23810D9E175BA08D001676CD /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
 		23810D9F175BA08D001676CD /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
@@ -434,6 +439,9 @@
 			isa = PBXGroup;
 			children = (
 				2346A54E176BF3BE007FF38A /* models */,
+				2346A561176C155E007FF38A /* TweetCustomCell.h */,
+				2346A562176C155E007FF38A /* TweetCustomCell.m */,
+				2346A563176C155F007FF38A /* TweetCustomCell.xib */,
 				238FF94E176AA6190080D544 /* TwitterListViewController.h */,
 				238FF94F176AA6190080D544 /* TwitterListViewController.m */,
 				238FF951176AAA8E0080D544 /* TwitterListView.xib */,
@@ -517,6 +525,7 @@
 				23810DA2175BA246001676CD /* MyApps.xib in Resources */,
 				23810DB0175BB183001676CD /* MyAppCell.xib in Resources */,
 				238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */,
+				2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +565,7 @@
 				2346A55A176BF44B007FF38A /* TTUser.m in Sources */,
 				2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */,
 				2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */,
+				2346A564176C155F007FF38A /* TweetCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
