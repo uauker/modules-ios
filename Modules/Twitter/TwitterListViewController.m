@@ -98,11 +98,39 @@
     [cell setTweet:tweet];
     [cell load];
     
+    //TextView
+    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+    
+    if (!textView) {
+        textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
+        textView.backgroundColor = [UIColor clearColor];
+        textView.tag = 5;
+        textView.editable = NO;
+        textView.scrollEnabled = NO;
+        textView.userInteractionEnabled = NO;
+        textView.dataDetectorTypes = UIDataDetectorTypeNone;
+    }
+    
+    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIFont systemFontOfSize:14], NSFontAttributeName,
+                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
+    
+    textView.attributedText = [[NSMutableAttributedString alloc] initWithString:tweet.text attributes:attributes];
+    
+    [cell.contentView addSubview:textView];
+    CGRect frame = textView.frame;
+    frame.size.height = textView.contentSize.height;
+    textView.frame = frame;
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 119;
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+    int partialCellSize = (textView.frame.size.height < 35) ? 38 : textView.frame.size.height;
+    
+    return 27 + partialCellSize;
 }
 
 @end
