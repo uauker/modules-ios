@@ -40,28 +40,25 @@
     __block NSMutableArray *tmpTweets = [[NSMutableArray alloc] init];
     
     [self.tableView addPullToRefreshWithActionHandler:^{
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, vc.minimumTimeInSeconds * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
-                
-                [twitter getUserListWithListName:vc.listname ownerScreenName:vc.username successBlock:^(NSArray *statuses) {
-                    for (NSDictionary *dictionary in statuses) {
-                        TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
-                        [tmpTweets addObject:tweet];
-                    }
-                    
-                    vc.tweets = tmpTweets;
-                    
-                    [vc.tableView reloadData];
-                } errorBlock:^(NSError *error) {
-                    //TODO: deu problema, e ai?
-                    NSLog(@"deu xabu: %@", [error description]);
-                }];
-                
-                [vc.tableView.pullToRefreshView stopAnimating];
-            });
-        });
+        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        
+        [twitter getUserListWithListName:vc.listname ownerScreenName:vc.username successBlock:^(NSArray *statuses) {
+            for (NSDictionary *dictionary in statuses) {
+                TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
+                [tmpTweets addObject:tweet];
+            }
+            
+            vc.tweets = tmpTweets;
+            
+            [vc.tableView reloadData];
+            
+            [vc.tableView.pullToRefreshView stopAnimating];
+        } errorBlock:^(NSError *error) {
+            //TODO: deu problema, e ai?
+            NSLog(@"deu xabu: %@", [error description]);
+            
+            [vc.tableView.pullToRefreshView stopAnimating];
+        }];        
     }];
     
     [self.tableView triggerPullToRefresh];
