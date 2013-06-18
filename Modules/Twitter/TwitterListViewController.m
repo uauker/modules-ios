@@ -166,11 +166,13 @@
 #pragma mark - Others
 
 - (void)setTweetUpdateTime {
-    tweetUpdateTime = [NSTimer scheduledTimerWithTimeInterval:(60.0)
-                                                       target:self
-                                                     selector:@selector(tableViewReload)
-                                                     userInfo:nil 
-                                                      repeats:YES];
+    if (!tweetUpdateTime || ![tweetUpdateTime isValid]) {
+        tweetUpdateTime = [NSTimer scheduledTimerWithTimeInterval:(60.0)
+                                                           target:self
+                                                         selector:@selector(tableViewReload)
+                                                         userInfo:nil
+                                                          repeats:YES];        
+    }
 }
 
 - (void)tableViewReload {
