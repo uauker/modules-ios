@@ -8,7 +8,9 @@
 
 #import "TwitterListViewController.h"
 
-@interface TwitterListViewController ()
+@interface TwitterListViewController () {
+    NSTimer *tweetUpdateTime;
+}
 
 @end
 
@@ -33,6 +35,8 @@
 {
     [super viewDidLoad];
 
+    [self setTweetUpdateTime];
+    
     __block TwitterListViewController *vc = self;
     __block NSMutableArray *tmpTweets;
     
@@ -93,6 +97,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    if (tweetUpdateTime) {
+        [tweetUpdateTime invalidate];
+    }
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -151,6 +161,20 @@
     int partialCellSize = (textView.frame.size.height < 35) ? 38 : textView.frame.size.height;
     
     return 27 + partialCellSize;
+}
+
+#pragma mark - Others
+
+- (void)setTweetUpdateTime {
+    tweetUpdateTime = [NSTimer scheduledTimerWithTimeInterval:(60.0)
+                                                       target:self
+                                                     selector:@selector(tableViewReload)
+                                                     userInfo:nil 
+                                                      repeats:YES];
+}
+
+- (void)tableViewReload {
+    [self.tableView reloadData];
 }
 
 @end
