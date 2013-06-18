@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 #import "STTwitterAPIWrapper.h"
 #import "TTUser+Parse.h"
 #import "TTTweet+Parse.h"
@@ -37,6 +38,6 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSArray *tweets;
+@property (nonatomic, strong) NSMutableArray *tweets;
 
 @end

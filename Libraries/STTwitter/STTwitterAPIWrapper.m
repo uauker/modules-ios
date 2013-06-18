@@ -661,6 +661,14 @@ id removeNull(id rootObject);
     [self getTimeline:@"lists/statuses.json" withParameters:@{ @"slug" : listName, @"owner_screen_name" : ownerScreenName } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
 }
 
+- (void)getUserListWithListName:(NSString *)listName
+                ownerScreenName:(NSString *)ownerScreenName
+                          maxId:(NSString *)maxId
+                   successBlock:(void(^)(NSArray *statuses))successBlock
+                     errorBlock:(void(^)(NSError *error))errorBlock {
+    [self getTimeline:@"lists/statuses.json" withParameters:@{ @"slug" : listName, @"owner_screen_name" : ownerScreenName, @"max_id" : maxId } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
+}
+
 #pragma mark Saved Searches
 
 #pragma mark Places & Geo

@@ -363,6 +363,12 @@
                    successBlock:(void(^)(NSArray *statuses))successBlock
                      errorBlock:(void(^)(NSError *error))errorBlock;
 
+- (void)getUserListWithListName:(NSString *)listName
+                ownerScreenName:(NSString *)ownerScreenName
+                          maxId:(NSString *)maxId
+                   successBlock:(void(^)(NSArray *statuses))successBlock
+                     errorBlock:(void(^)(NSError *error))errorBlock;
+
 //	POST	lists/members/destroy
 
 //	GET		lists/memberships
