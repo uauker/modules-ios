@@ -100,6 +100,7 @@
 - (void)dealloc {
     if (tweetUpdateTime) {
         [tweetUpdateTime invalidate];
+        tweetUpdateTime = nil;
     }
 }
 
@@ -166,7 +167,7 @@
 #pragma mark - Others
 
 - (void)setTweetUpdateTime {
-    if (!tweetUpdateTime || ![tweetUpdateTime isValid]) {
+    if (!tweetUpdateTime) {
         tweetUpdateTime = [NSTimer scheduledTimerWithTimeInterval:(60.0)
                                                            target:self
                                                          selector:@selector(tableViewReload)
