@@ -28,6 +28,8 @@
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *listname;
 
+@property (nonatomic, copy) NSString *navTitle;
+
 
 // Opcional
 

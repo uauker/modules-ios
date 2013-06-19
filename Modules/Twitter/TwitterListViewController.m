@@ -37,10 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [self setTweetUpdateTime];
+    
+    [self.navigationItem setTitle:self.navTitle];
     
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];
+    
+    [self setTweetUpdateTime];
     
     __block TwitterListViewController *vc = self;
     __block NSMutableArray *tmpTweets;
