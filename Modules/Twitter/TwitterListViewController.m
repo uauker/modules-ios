@@ -17,6 +17,9 @@
 @implementation TwitterListViewController
 
 - (void)initWithVariables {
+    if (!self.tableBackgroundColor) {
+        self.tableBackgroundColor = [UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.0];
+    }
 }
 
 - (void)loadView
@@ -36,6 +39,8 @@
     [super viewDidLoad];
 
     [self setTweetUpdateTime];
+    
+    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
     __block TwitterListViewController *vc = self;
     __block NSMutableArray *tmpTweets;

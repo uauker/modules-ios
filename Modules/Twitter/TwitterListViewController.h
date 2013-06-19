@@ -31,6 +31,8 @@
 
 // Opcional
 
+@property (nonatomic, strong) UIColor *tableBackgroundColor;
+
 
 // Privado
 

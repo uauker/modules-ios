@@ -29,6 +29,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    self.backgroundColor = [UIColor whiteColor];
+    
     self.imageView.frame = CGRectMake(8, 8, 48, 48);
     float limgW =  self.imageView.image.size.width;
     
