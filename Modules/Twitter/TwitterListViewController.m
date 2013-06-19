@@ -171,6 +171,14 @@
     return 27 + partialCellSize;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+
+    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+    
+    NSLog(@"%@", [tweet text]);
+}
+
 #pragma mark - Others
 
 - (void)setTweetUpdateTime {
