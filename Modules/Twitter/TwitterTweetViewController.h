@@ -11,8 +11,9 @@
 #import "TTTweet.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
+#import "TwitterText.h"
 
-@interface TwitterTweetViewController : UIViewController
+@interface TwitterTweetViewController : UIViewController <TTTAttributedLabelDelegate>
 
 @property(nonatomic, strong) TTTweet *tweet;
 
