@@ -78,6 +78,7 @@
 		23D1BBCA177384A2005A1B2C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC2177384A2005A1B2C /* LICENSE */; };
 		23D1BBCB177384A2005A1B2C /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC3177384A2005A1B2C /* Rakefile */; };
 		23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC4177384A2005A1B2C /* README.rdoc */; };
+		23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBCE1773959B005A1B2C /* NSString+PGString.m */; };
 		23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1951417727927003FF267 /* TwitterTweetViewController.m */; };
 		23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1951517727927003FF267 /* TwitterTweetViewController.xib */; };
 /* End PBXBuildFile section */
@@ -191,6 +192,8 @@
 		23D1BBC2177384A2005A1B2C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		23D1BBC3177384A2005A1B2C /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		23D1BBC4177384A2005A1B2C /* README.rdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rdoc; sourceTree = "<group>"; };
+		23D1BBCD1773959B005A1B2C /* NSString+PGString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PGString.h"; sourceTree = "<group>"; };
+		23D1BBCE1773959B005A1B2C /* NSString+PGString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PGString.m"; sourceTree = "<group>"; };
 		23E1951317727927003FF267 /* TwitterTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTweetViewController.h; sourceTree = "<group>"; };
 		23E1951417727927003FF267 /* TwitterTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTweetViewController.m; sourceTree = "<group>"; };
 		23E1951517727927003FF267 /* TwitterTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTweetViewController.xib; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 		232C4E0F175A2FE700C5CDC4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				23D1BBCD1773959B005A1B2C /* NSString+PGString.h */,
+				23D1BBCE1773959B005A1B2C /* NSString+PGString.m */,
 				232C4E10175A2FE700C5CDC4 /* EGOCache+PGCache.h */,
 				232C4E11175A2FE700C5CDC4 /* EGOCache+PGCache.m */,
 				232C4E12175A2FE700C5CDC4 /* NSDate+PGDate.h */,
@@ -642,6 +647,7 @@
 				23D1BBC5177384A2005A1B2C /* TTTAttributedLabel.m in Sources */,
 				23D1BBC8177384A2005A1B2C /* TwitterText.m in Sources */,
 				23D1BBC9177384A2005A1B2C /* TwitterTextEntity.m in Sources */,
+				23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

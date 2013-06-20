@@ -12,8 +12,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
 #import "TwitterText.h"
+#import "TSMiniWebBrowser+PGBrowser.h"
+#import "NSString+PGString.h"
 
-@interface TwitterTweetViewController : UIViewController <TTTAttributedLabelDelegate>
+@interface TwitterTweetViewController : UIViewController <TTTAttributedLabelDelegate, TSMiniWebBrowserDelegate>
 
 @property(nonatomic, strong) TTTweet *tweet;
 

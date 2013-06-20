@@ -92,4 +92,13 @@
     return string;
 }
 
+#pragma mark TTTAttributedLabel
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    if ([[url scheme] containsString:@"http"]) {
+        TSMiniWebBrowser *webBrowser = [TSMiniWebBrowser browserWithUrl:url delegate:self];
+        [self.navigationController pushViewController:webBrowser animated:YES];
+    }
+}
+
 @end
