@@ -26,6 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.hours.text = self.tweet.toHourMinute;
+    [self.profileImage setImageWithURL:[NSURL URLWithString:[self.tweet.user profileImageUrl]]];
+    self.screenName.text = self.tweet.user.name;
+    self.twitterUser.text = [NSString stringWithFormat:@"@%@", self.tweet.user.screenName];
+    
+    self.text.text = self.tweet.text;
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTTAttributedLabel.h"
 #import "TTTweet.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
@@ -14,5 +15,11 @@
 @interface TwitterTweetViewController : UIViewController
 
 @property(nonatomic, strong) TTTweet *tweet;
+
+@property (weak, nonatomic) IBOutlet UILabel *hours;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *screenName;
+@property (weak, nonatomic) IBOutlet UILabel *twitterUser;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *text;
 
 @end

@@ -69,6 +69,15 @@
 		238FF94C176AA4110080D544 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF945176AA4110080D544 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		238FF950176AA6190080D544 /* TwitterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF94F176AA6190080D544 /* TwitterListViewController.m */; };
 		238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FF951176AAA8E0080D544 /* TwitterListView.xib */; };
+		23D1BBB617738034005A1B2C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D1BBB517738034005A1B2C /* CoreText.framework */; };
+		23D1BBC5177384A2005A1B2C /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBB9177384A2005A1B2C /* TTTAttributedLabel.m */; };
+		23D1BBC6177384A2005A1B2C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBBB177384A2005A1B2C /* .gitignore */; };
+		23D1BBC7177384A2005A1B2C /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBBC177384A2005A1B2C /* .gitmodules */; };
+		23D1BBC8177384A2005A1B2C /* TwitterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBBF177384A2005A1B2C /* TwitterText.m */; };
+		23D1BBC9177384A2005A1B2C /* TwitterTextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBC1177384A2005A1B2C /* TwitterTextEntity.m */; };
+		23D1BBCA177384A2005A1B2C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC2177384A2005A1B2C /* LICENSE */; };
+		23D1BBCB177384A2005A1B2C /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC3177384A2005A1B2C /* Rakefile */; };
+		23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */ = {isa = PBXBuildFile; fileRef = 23D1BBC4177384A2005A1B2C /* README.rdoc */; };
 		23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1951417727927003FF267 /* TwitterTweetViewController.m */; };
 		23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1951517727927003FF267 /* TwitterTweetViewController.xib */; };
 /* End PBXBuildFile section */
@@ -170,6 +179,18 @@
 		238FF94E176AA6190080D544 /* TwitterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterListViewController.h; sourceTree = "<group>"; };
 		238FF94F176AA6190080D544 /* TwitterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterListViewController.m; sourceTree = "<group>"; };
 		238FF951176AAA8E0080D544 /* TwitterListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterListView.xib; sourceTree = "<group>"; };
+		23D1BBB517738034005A1B2C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		23D1BBB8177384A2005A1B2C /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		23D1BBB9177384A2005A1B2C /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		23D1BBBB177384A2005A1B2C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		23D1BBBC177384A2005A1B2C /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		23D1BBBE177384A2005A1B2C /* TwitterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterText.h; sourceTree = "<group>"; };
+		23D1BBBF177384A2005A1B2C /* TwitterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterText.m; sourceTree = "<group>"; };
+		23D1BBC0177384A2005A1B2C /* TwitterTextEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTextEntity.h; sourceTree = "<group>"; };
+		23D1BBC1177384A2005A1B2C /* TwitterTextEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTextEntity.m; sourceTree = "<group>"; };
+		23D1BBC2177384A2005A1B2C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		23D1BBC3177384A2005A1B2C /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		23D1BBC4177384A2005A1B2C /* README.rdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rdoc; sourceTree = "<group>"; };
 		23E1951317727927003FF267 /* TwitterTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTweetViewController.h; sourceTree = "<group>"; };
 		23E1951417727927003FF267 /* TwitterTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTweetViewController.m; sourceTree = "<group>"; };
 		23E1951517727927003FF267 /* TwitterTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTweetViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D1BBB617738034005A1B2C /* CoreText.framework in Frameworks */,
 				23810DB2175BB271001676CD /* ImageIO.framework in Frameworks */,
 				232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */,
 				232C4DE2175A2F1D00C5CDC4 /* UIKit.framework in Frameworks */,
@@ -215,6 +237,7 @@
 		232C4DE0175A2F1D00C5CDC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23D1BBB517738034005A1B2C /* CoreText.framework */,
 				23810DB1175BB271001676CD /* ImageIO.framework */,
 				232C4E64175A321900C5CDC4 /* QuartzCore.framework */,
 				232C4DE1175A2F1D00C5CDC4 /* UIKit.framework */,
@@ -271,6 +294,8 @@
 		232C4E16175A2FE700C5CDC4 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				23D1BBB7177384A2005A1B2C /* TTTAttributedLabel */,
+				23D1BBBA177384A2005A1B2C /* twitter-text-objc */,
 				238FF935176AA4110080D544 /* STTwitter */,
 				236A46C41760099F00AED2E1 /* SDWebImage.framework */,
 				232C4E17175A2FE700C5CDC4 /* EGOCache */,
@@ -457,6 +482,39 @@
 			path = Twitter;
 			sourceTree = "<group>";
 		};
+		23D1BBB7177384A2005A1B2C /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				23D1BBB8177384A2005A1B2C /* TTTAttributedLabel.h */,
+				23D1BBB9177384A2005A1B2C /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		23D1BBBA177384A2005A1B2C /* twitter-text-objc */ = {
+			isa = PBXGroup;
+			children = (
+				23D1BBBB177384A2005A1B2C /* .gitignore */,
+				23D1BBBC177384A2005A1B2C /* .gitmodules */,
+				23D1BBBD177384A2005A1B2C /* lib */,
+				23D1BBC2177384A2005A1B2C /* LICENSE */,
+				23D1BBC3177384A2005A1B2C /* Rakefile */,
+				23D1BBC4177384A2005A1B2C /* README.rdoc */,
+			);
+			path = "twitter-text-objc";
+			sourceTree = "<group>";
+		};
+		23D1BBBD177384A2005A1B2C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				23D1BBBE177384A2005A1B2C /* TwitterText.h */,
+				23D1BBBF177384A2005A1B2C /* TwitterText.m */,
+				23D1BBC0177384A2005A1B2C /* TwitterTextEntity.h */,
+				23D1BBC1177384A2005A1B2C /* TwitterTextEntity.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -535,6 +593,11 @@
 				238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */,
 				2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */,
 				23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */,
+				23D1BBC6177384A2005A1B2C /* .gitignore in Resources */,
+				23D1BBC7177384A2005A1B2C /* .gitmodules in Resources */,
+				23D1BBCA177384A2005A1B2C /* LICENSE in Resources */,
+				23D1BBCB177384A2005A1B2C /* Rakefile in Resources */,
+				23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +639,9 @@
 				2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */,
 				2346A564176C155F007FF38A /* TweetCustomCell.m in Sources */,
 				23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */,
+				23D1BBC5177384A2005A1B2C /* TTTAttributedLabel.m in Sources */,
+				23D1BBC8177384A2005A1B2C /* TwitterText.m in Sources */,
+				23D1BBC9177384A2005A1B2C /* TwitterTextEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
