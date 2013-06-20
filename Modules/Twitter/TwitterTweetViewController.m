@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationItem setTitle:self.tweet.user.name];
+    
     self.hours.text = self.tweet.toHourMinute;
     [self.profileImage setImageWithURL:[NSURL URLWithString:[self.tweet.user profileImageUrl]]];
     self.screenName.text = self.tweet.user.name;
