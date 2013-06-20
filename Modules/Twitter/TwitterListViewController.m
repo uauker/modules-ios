@@ -177,6 +177,11 @@
     TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
     
     NSLog(@"%@", [tweet text]);
+    
+    TwitterTweetViewController *tweetViewController = [[TwitterTweetViewController alloc] initWithNibName:@"TwitterTweetViewController" bundle:nil];
+    tweetViewController.tweet = tweet;
+
+    [self.navigationController pushViewController:tweetViewController animated:YES];
 }
 
 #pragma mark - Others

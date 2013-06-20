@@ -69,6 +69,8 @@
 		238FF94C176AA4110080D544 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF945176AA4110080D544 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		238FF950176AA6190080D544 /* TwitterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF94F176AA6190080D544 /* TwitterListViewController.m */; };
 		238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FF951176AAA8E0080D544 /* TwitterListView.xib */; };
+		23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1951417727927003FF267 /* TwitterTweetViewController.m */; };
+		23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1951517727927003FF267 /* TwitterTweetViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +170,9 @@
 		238FF94E176AA6190080D544 /* TwitterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterListViewController.h; sourceTree = "<group>"; };
 		238FF94F176AA6190080D544 /* TwitterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterListViewController.m; sourceTree = "<group>"; };
 		238FF951176AAA8E0080D544 /* TwitterListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterListView.xib; sourceTree = "<group>"; };
+		23E1951317727927003FF267 /* TwitterTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTweetViewController.h; sourceTree = "<group>"; };
+		23E1951417727927003FF267 /* TwitterTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTweetViewController.m; sourceTree = "<group>"; };
+		23E1951517727927003FF267 /* TwitterTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTweetViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +450,9 @@
 				238FF94E176AA6190080D544 /* TwitterListViewController.h */,
 				238FF94F176AA6190080D544 /* TwitterListViewController.m */,
 				238FF951176AAA8E0080D544 /* TwitterListView.xib */,
+				23E1951317727927003FF267 /* TwitterTweetViewController.h */,
+				23E1951417727927003FF267 /* TwitterTweetViewController.m */,
+				23E1951517727927003FF267 /* TwitterTweetViewController.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -526,6 +534,7 @@
 				23810DB0175BB183001676CD /* MyAppCell.xib in Resources */,
 				238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */,
 				2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */,
+				23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +575,7 @@
 				2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */,
 				2346A560176C086D007FF38A /* TTTweet+Parse.m in Sources */,
 				2346A564176C155F007FF38A /* TweetCustomCell.m in Sources */,
+				23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
