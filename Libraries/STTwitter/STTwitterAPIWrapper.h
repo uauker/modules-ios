@@ -352,6 +352,10 @@
 
 //	GET		lists/list
 
+- (void)getListWithScreenName:(NSString *)screenName
+                 successBlock:(void(^)(NSArray *statuses))successBlock
+                   errorBlock:(void(^)(NSError *error))errorBlock;
+
 //	GET		lists/statuses
 
 - (void)getUserListWithListID:(NSString *)listID

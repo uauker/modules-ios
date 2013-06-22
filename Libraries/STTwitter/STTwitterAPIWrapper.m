@@ -653,6 +653,12 @@ id removeNull(id rootObject);
 
 #pragma mark Lists
 
+- (void)getListWithScreenName:(NSString *)screenName
+                      successBlock:(void(^)(NSArray *statuses))successBlock
+                        errorBlock:(void(^)(NSError *error))errorBlock {
+    [self getTimeline:@"lists/list.json" withParameters:@{ @"screen_name" : screenName } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
+}
+
 - (void)getUserListWithListID:(NSString *)listID
                  successBlock:(void(^)(NSArray *statuses))successBlock
                    errorBlock:(void(^)(NSError *error))errorBlock {
