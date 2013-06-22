@@ -113,6 +113,7 @@
     
     TwitterUserTweetsViewController *twitterUserTweetsViewController = [[TwitterUserTweetsViewController alloc] initWithNibName:@"TwitterUserTweetsViewController" bundle:nil];
     twitterUserTweetsViewController.screenName = [[self.tweet user] screenName];
+    twitterUserTweetsViewController.navTitle = [[self.tweet user] name];
     
     [self.navigationController pushViewController:twitterUserTweetsViewController animated:YES];
 }
