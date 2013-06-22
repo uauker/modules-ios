@@ -103,4 +103,8 @@
     }
 }
 
+- (IBAction)touchUpInsideInUsername:(id)sender {
+    NSLog(@"%@", [self.tweet description]);
+}
+
 @end
