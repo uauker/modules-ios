@@ -57,6 +57,10 @@
             
             vc.tweets = tmpTweets;
             
+            if (vc.tweets && [vc.tweets count] > 0) {
+                [vc.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+            }
+            
             [vc.tableView reloadData];
             
             [vc.tableView.pullToRefreshView stopAnimating];
