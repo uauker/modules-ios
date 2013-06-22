@@ -117,6 +117,12 @@
                          successBlock:(void(^)(NSArray *statuses))successBlock
                            errorBlock:(void(^)(NSError *error))errorBlock;
 
+- (void)getUserTimelineWithScreenName:(NSString *)screenName
+                                maxId:(NSString *)maxId
+								count:(NSUInteger)optionalCount
+                         successBlock:(void(^)(NSArray *statuses))successBlock
+                           errorBlock:(void(^)(NSError *error))errorBlock;
+
 //	GET		statuses/home_timeline
 //	Returns Tweets (*: tweets from people the user follows)
 - (void)getHomeTimelineSinceID:(NSString *)optionalSinceID

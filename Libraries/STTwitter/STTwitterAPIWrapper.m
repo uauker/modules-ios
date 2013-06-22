@@ -278,6 +278,19 @@ id removeNull(id rootObject);
 }
 
 - (void)getUserTimelineWithScreenName:(NSString *)screenName
+                                maxId:(NSString *)maxId
+								count:(NSUInteger)optionalCount
+                         successBlock:(void(^)(NSArray *statuses))successBlock
+                           errorBlock:(void(^)(NSError *error))errorBlock {
+	[self getTimeline:@"statuses/user_timeline.json"
+	   withParameters:@{ @"screen_name" : screenName, @"max_id" : maxId }
+			  sinceID:nil
+				count:optionalCount
+		 successBlock:successBlock
+		   errorBlock:errorBlock];
+}
+
+- (void)getUserTimelineWithScreenName:(NSString *)screenName
                          successBlock:(void(^)(NSArray *statuses))successBlock
                            errorBlock:(void(^)(NSError *error))errorBlock {
     
