@@ -104,7 +104,10 @@
 }
 
 - (IBAction)touchUpInsideInUsername:(id)sender {
-    NSLog(@"%@", [self.tweet description]);
+    TwitterUserTweetsViewController *twitterUserTweetsViewController = [[TwitterUserTweetsViewController alloc] initWithNibName:@"TwitterUserTweetsViewController" bundle:nil];
+    twitterUserTweetsViewController.username = [[self.tweet user] name];
+    
+    [self.navigationController pushViewController:twitterUserTweetsViewController animated:YES];
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230AE68317752666008A701D /* TwitterUserTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230AE68117752666008A701D /* TwitterUserTweetsViewController.m */; };
+		230AE68417752666008A701D /* TwitterUserTweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230AE68217752666008A701D /* TwitterUserTweetsViewController.xib */; };
 		232C4DE2175A2F1D00C5CDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE1175A2F1D00C5CDC4 /* UIKit.framework */; };
 		232C4DE4175A2F1D00C5CDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE3175A2F1D00C5CDC4 /* Foundation.framework */; };
 		232C4DE6175A2F1D00C5CDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE5175A2F1D00C5CDC4 /* CoreGraphics.framework */; };
@@ -84,6 +86,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230AE68017752666008A701D /* TwitterUserTweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUserTweetsViewController.h; sourceTree = "<group>"; };
+		230AE68117752666008A701D /* TwitterUserTweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUserTweetsViewController.m; sourceTree = "<group>"; };
+		230AE68217752666008A701D /* TwitterUserTweetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterUserTweetsViewController.xib; sourceTree = "<group>"; };
 		232C4DDE175A2F1D00C5CDC4 /* Projeto Modules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Modules.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		232C4DE1175A2F1D00C5CDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		232C4DE3175A2F1D00C5CDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -483,6 +488,9 @@
 				23E1951317727927003FF267 /* TwitterTweetViewController.h */,
 				23E1951417727927003FF267 /* TwitterTweetViewController.m */,
 				23E1951517727927003FF267 /* TwitterTweetViewController.xib */,
+				230AE68017752666008A701D /* TwitterUserTweetsViewController.h */,
+				230AE68117752666008A701D /* TwitterUserTweetsViewController.m */,
+				230AE68217752666008A701D /* TwitterUserTweetsViewController.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -603,6 +611,7 @@
 				23D1BBCA177384A2005A1B2C /* LICENSE in Resources */,
 				23D1BBCB177384A2005A1B2C /* Rakefile in Resources */,
 				23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */,
+				230AE68417752666008A701D /* TwitterUserTweetsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +657,7 @@
 				23D1BBC8177384A2005A1B2C /* TwitterText.m in Sources */,
 				23D1BBC9177384A2005A1B2C /* TwitterTextEntity.m in Sources */,
 				23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */,
+				230AE68317752666008A701D /* TwitterUserTweetsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TwitterUserTweetsViewController.h"
 #import "TTTAttributedLabel.h"
 #import "TTTweet.h"
 #import <SDWebImage/UIImageView+WebCache.h>
