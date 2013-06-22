@@ -24,6 +24,7 @@
 
 // Obrigatorio
 
+@property (nonatomic, copy) NSString *navTitle;
 @property (nonatomic, copy) NSString *screenName;
 
 

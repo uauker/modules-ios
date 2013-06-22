@@ -8,7 +8,9 @@
 
 #import "TwitterUserTweetsViewController.h"
 
-@interface TwitterUserTweetsViewController ()
+@interface TwitterUserTweetsViewController () {
+    NSTimer *tweetUpdateTime;
+}
 
 @end
 
@@ -27,8 +29,8 @@
 {
     [super viewDidLoad];
 
-//    [self.navigationItem setTitle:self.navTitle];
-//    
+    [self.navigationItem setTitle:self.navTitle];
+//
 //    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
 //    [self setTweetUpdateTime];
@@ -91,6 +93,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    if (tweetUpdateTime) {
+        [tweetUpdateTime invalidate];
+        tweetUpdateTime = nil;
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -163,5 +172,21 @@
 //    
 //    [self.navigationController pushViewController:tweetViewController animated:YES];
 //}
+
+#pragma mark - Others
+
+- (void)setTweetUpdateTime {
+    if (!tweetUpdateTime) {
+        tweetUpdateTime = [NSTimer scheduledTimerWithTimeInterval:(60.0)
+                                                           target:self
+                                                         selector:@selector(tableViewReload)
+                                                         userInfo:nil
+                                                          repeats:YES];
+    }
+}
+
+- (void)tableViewReload {
+    [self.tableView reloadData];
+}
 
 @end
