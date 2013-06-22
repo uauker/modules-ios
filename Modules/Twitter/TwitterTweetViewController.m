@@ -105,7 +105,7 @@
 
 - (IBAction)touchUpInsideInUsername:(id)sender {
     TwitterUserTweetsViewController *twitterUserTweetsViewController = [[TwitterUserTweetsViewController alloc] initWithNibName:@"TwitterUserTweetsViewController" bundle:nil];
-    twitterUserTweetsViewController.username = [[self.tweet user] name];
+    twitterUserTweetsViewController.screenName = [[self.tweet user] screenName];
     
     [self.navigationController pushViewController:twitterUserTweetsViewController animated:YES];
 }
