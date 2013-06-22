@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TwitterTweetViewController.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "TTUser+Parse.h"

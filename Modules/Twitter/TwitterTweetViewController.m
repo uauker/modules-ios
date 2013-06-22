@@ -14,11 +14,14 @@
 
 @implementation TwitterTweetViewController
 
+- (void)initWithVariables {
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self initWithVariables];
     }
     return self;
 }
@@ -104,6 +107,10 @@
 }
 
 - (IBAction)touchUpInsideInUsername:(id)sender {
+    if (![self canAccessUserTweets]) {
+        return ;
+    }
+    
     TwitterUserTweetsViewController *twitterUserTweetsViewController = [[TwitterUserTweetsViewController alloc] initWithNibName:@"TwitterUserTweetsViewController" bundle:nil];
     twitterUserTweetsViewController.screenName = [[self.tweet user] screenName];
     

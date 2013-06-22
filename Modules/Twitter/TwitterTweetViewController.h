@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *twitterUser;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *text;
 
+@property(nonatomic) BOOL canAccessUserTweets;
+
 - (IBAction)touchUpInsideInUsername:(id)sender;
 
 @end

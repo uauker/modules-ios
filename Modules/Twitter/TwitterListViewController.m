@@ -182,6 +182,7 @@
     
     TwitterTweetViewController *tweetViewController = [[TwitterTweetViewController alloc] initWithNibName:@"TwitterTweetViewController" bundle:nil];
     tweetViewController.tweet = tweet;
+    tweetViewController.canAccessUserTweets = YES;
 
     [self.navigationController pushViewController:tweetViewController animated:YES];
 }

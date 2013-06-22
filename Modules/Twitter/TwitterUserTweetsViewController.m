@@ -172,16 +172,17 @@
     return 27 + partialCellSize;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
-//    
-//    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
-//    
-//    TwitterTweetViewController *tweetViewController = [[TwitterTweetViewController alloc] initWithNibName:@"TwitterTweetViewController" bundle:nil];
-//    tweetViewController.tweet = tweet;
-//    
-//    [self.navigationController pushViewController:tweetViewController animated:YES];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    
+    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+    
+    TwitterTweetViewController *tweetViewController = [[TwitterTweetViewController alloc] initWithNibName:@"TwitterTweetViewController" bundle:nil];
+    tweetViewController.tweet = tweet;
+    tweetViewController.canAccessUserTweets = NO;
+    
+    [self.navigationController pushViewController:tweetViewController animated:YES];
+}
 
 #pragma mark - Others
 
