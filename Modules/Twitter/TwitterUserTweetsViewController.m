@@ -33,7 +33,7 @@
 //
 //    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
-//    [self setTweetUpdateTime];
+    [self setTweetUpdateTime];
     
     __block TwitterUserTweetsViewController *vc = self;
     __block NSMutableArray *tmpTweets;
