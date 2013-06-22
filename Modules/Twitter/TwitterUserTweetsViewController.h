@@ -28,6 +28,11 @@
 @property (nonatomic, copy) NSString *screenName;
 
 
+// Opcional
+
+@property (nonatomic, strong) UIColor *tableBackgroundColor;
+
+
 // Privado
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

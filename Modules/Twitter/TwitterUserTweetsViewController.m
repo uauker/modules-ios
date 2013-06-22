@@ -16,11 +16,17 @@
 
 @implementation TwitterUserTweetsViewController
 
+- (void)initWithVariables {
+    if (!self.tableBackgroundColor) {
+        self.tableBackgroundColor = [UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.0];
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self initWithVariables];
     }
     return self;
 }
@@ -30,8 +36,8 @@
     [super viewDidLoad];
 
     [self.navigationItem setTitle:self.navTitle];
-//
-//    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
+
+    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
     [self setTweetUpdateTime];
     
