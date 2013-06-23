@@ -50,6 +50,8 @@
 		232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232C4E5D175A303C00C5CDC4 /* TelaDeNews.xib */; };
 		232C4E63175A303C00C5CDC4 /* TelaDeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */; };
 		232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
+		232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86EF177678A100438194 /* TwitterUserListViewController.m */; };
+		232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F0177678A100438194 /* TwitterUserListViewController.xib */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -148,6 +150,9 @@
 		232C4E5E175A303C00C5CDC4 /* TelaDeNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaDeNewsViewController.h; sourceTree = "<group>"; };
 		232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaDeNewsViewController.m; sourceTree = "<group>"; };
 		232C4E64175A321900C5CDC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		232E86EE177678A100438194 /* TwitterUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUserListViewController.h; sourceTree = "<group>"; };
+		232E86EF177678A100438194 /* TwitterUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUserListViewController.m; sourceTree = "<group>"; };
+		232E86F0177678A100438194 /* TwitterUserListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterUserListViewController.xib; sourceTree = "<group>"; };
 		2346A555176BF44B007FF38A /* TTTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweet.h; sourceTree = "<group>"; };
 		2346A556176BF44B007FF38A /* TTTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweet.m; sourceTree = "<group>"; };
 		2346A557176BF44B007FF38A /* TTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUser.h; sourceTree = "<group>"; };
@@ -491,6 +496,9 @@
 				230AE68017752666008A701D /* TwitterUserTweetsViewController.h */,
 				230AE68117752666008A701D /* TwitterUserTweetsViewController.m */,
 				230AE68217752666008A701D /* TwitterUserTweetsViewController.xib */,
+				232E86EE177678A100438194 /* TwitterUserListViewController.h */,
+				232E86EF177678A100438194 /* TwitterUserListViewController.m */,
+				232E86F0177678A100438194 /* TwitterUserListViewController.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -612,6 +620,7 @@
 				23D1BBCB177384A2005A1B2C /* Rakefile in Resources */,
 				23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */,
 				230AE68417752666008A701D /* TwitterUserTweetsViewController.xib in Resources */,
+				232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +667,7 @@
 				23D1BBC9177384A2005A1B2C /* TwitterTextEntity.m in Sources */,
 				23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */,
 				230AE68317752666008A701D /* TwitterUserTweetsViewController.m in Sources */,
+				232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
