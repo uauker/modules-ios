@@ -52,7 +52,7 @@
 		232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
 		232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86EF177678A100438194 /* TwitterUserListViewController.m */; };
 		232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F0177678A100438194 /* TwitterUserListViewController.xib */; };
-		232E86F61777952D00438194 /* MyAppsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 232E86F31777952D00438194 /* MyAppsViewController.h */; };
+		232E86F61777952D00438194 /* MyAppsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 232E86F31777952D00438194 /* MyAppsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232E86F71777952D00438194 /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86F41777952D00438194 /* MyAppsViewController.m */; };
 		232E86F81777952D00438194 /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86F41777952D00438194 /* MyAppsViewController.m */; };
 		232E86F91777952D00438194 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F51777952D00438194 /* MyAppsViewController.xib */; };
@@ -617,8 +617,8 @@
 				4B23CBC217778709004DA2EF /* TTUser.h in Headers */,
 				4B23CBC317778709004DA2EF /* TTUser+Parse.h in Headers */,
 				4B23CBC417778709004DA2EF /* TTTweet+Parse.h in Headers */,
-				4B23CBC617778763004DA2EF /* PGApps.h in Headers */,
 				232E86F61777952D00438194 /* MyAppsViewController.h in Headers */,
+				4B23CBC617778763004DA2EF /* PGApps.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
