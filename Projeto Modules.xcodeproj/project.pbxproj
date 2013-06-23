@@ -69,6 +69,7 @@
 		232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E11175A2FE700C5CDC4 /* EGOCache+PGCache.m */; };
 		232E87071777ADAD00438194 /* EGOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E18175A2FE700C5CDC4 /* EGOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232E87081777ADAD00438194 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E19175A2FE700C5CDC4 /* EGOCache.m */; };
+		232E87091777B0CD00438194 /* PGApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810DA4175BA913001676CD /* PGApps.m */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -835,6 +836,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87091777B0CD00438194 /* PGApps.m in Sources */,
 				232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */,
 				232E87081777ADAD00438194 /* EGOCache.m in Sources */,
 				4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */,
