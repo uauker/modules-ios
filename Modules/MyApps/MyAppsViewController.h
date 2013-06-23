@@ -2,7 +2,7 @@
 //  MyAppsViewController.h
 //  Projeto Modules
 //
-//  Created by Uauker on 6/2/13.
+//  Created by Uauker on 6/23/13.
 //  Copyright (c) 2013 Uauker Inc. All rights reserved.
 //
 
@@ -16,17 +16,21 @@
 
 @interface MyAppsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+// Obrigatorio
+
 @property (nonatomic, copy) NSString *navTitle;
 
-//
+
+// Opcional
 
 @property (nonatomic, strong) UIColor *tableBackgroundColor;
 @property (nonatomic) int cacheTimeInSeconds;
 
-//
 
-@property (nonatomic, strong) UITableView *tableView;
+// Privado
 
 @property (nonatomic, retain) NSArray *apps;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

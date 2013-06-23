@@ -2,7 +2,7 @@
 //  MyAppsViewController.m
 //  Projeto Modules
 //
-//  Created by Uauker on 6/2/13.
+//  Created by Uauker on 6/23/13.
 //  Copyright (c) 2013 Uauker Inc. All rights reserved.
 //
 
@@ -24,22 +24,19 @@
     }
 }
 
-- (void)loadView
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    [super loadView];
-    
-    [self initWithVariables];
-    
-    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"MyApps" owner:self options:nil];
-    self.view = [nibObjects objectAtIndex:0];
-    
-    self.tableView = (UITableView *)[self.view viewWithTag:1];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self initWithVariables];
+    }
+    return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self.navigationItem setTitle:self.navTitle];
     
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];

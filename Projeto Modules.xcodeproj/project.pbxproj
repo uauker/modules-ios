@@ -52,6 +52,11 @@
 		232C4E65175A321900C5CDC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
 		232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86EF177678A100438194 /* TwitterUserListViewController.m */; };
 		232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F0177678A100438194 /* TwitterUserListViewController.xib */; };
+		232E86F61777952D00438194 /* MyAppsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 232E86F31777952D00438194 /* MyAppsViewController.h */; };
+		232E86F71777952D00438194 /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86F41777952D00438194 /* MyAppsViewController.m */; };
+		232E86F81777952D00438194 /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86F41777952D00438194 /* MyAppsViewController.m */; };
+		232E86F91777952D00438194 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F51777952D00438194 /* MyAppsViewController.xib */; };
+		232E86FA1777952D00438194 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F51777952D00438194 /* MyAppsViewController.xib */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -59,8 +64,6 @@
 		2346A564176C155F007FF38A /* TweetCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A562176C155E007FF38A /* TweetCustomCell.m */; };
 		2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2346A563176C155F007FF38A /* TweetCustomCell.xib */; };
 		236A46C51760099F00AED2E1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A46C41760099F00AED2E1 /* SDWebImage.framework */; };
-		23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810D9F175BA08D001676CD /* MyAppsViewController.m */; };
-		23810DA2175BA246001676CD /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
 		23810DA5175BA913001676CD /* PGApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810DA4175BA913001676CD /* PGApps.m */; };
 		23810DB0175BB183001676CD /* MyAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DAB175BB183001676CD /* MyAppCell.xib */; };
 		23810DB2175BB271001676CD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23810DB1175BB271001676CD /* ImageIO.framework */; };
@@ -90,10 +93,8 @@
 		4B23CBC217778709004DA2EF /* TTUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A557176BF44B007FF38A /* TTUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC317778709004DA2EF /* TTUser+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A55B176BF751007FF38A /* TTUser+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC417778709004DA2EF /* TTTweet+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A55E176C086C007FF38A /* TTTweet+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B23CBC517778763004DA2EF /* MyAppsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 23810D9E175BA08D001676CD /* MyAppsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC617778763004DA2EF /* PGApps.h in Headers */ = {isa = PBXBuildFile; fileRef = 23810DA3175BA913001676CD /* PGApps.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC71777877A004DA2EF /* MyAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DAB175BB183001676CD /* MyAppCell.xib */; };
-		4B23CBC81777877A004DA2EF /* MyApps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DA1175BA246001676CD /* MyApps.xib */; };
 		4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E1E175A2FE700C5CDC4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,9 @@
 		232E86EE177678A100438194 /* TwitterUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUserListViewController.h; sourceTree = "<group>"; };
 		232E86EF177678A100438194 /* TwitterUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUserListViewController.m; sourceTree = "<group>"; };
 		232E86F0177678A100438194 /* TwitterUserListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterUserListViewController.xib; sourceTree = "<group>"; };
+		232E86F31777952D00438194 /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
+		232E86F41777952D00438194 /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
+		232E86F51777952D00438194 /* MyAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAppsViewController.xib; sourceTree = "<group>"; };
 		2346A555176BF44B007FF38A /* TTTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweet.h; sourceTree = "<group>"; };
 		2346A556176BF44B007FF38A /* TTTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweet.m; sourceTree = "<group>"; };
 		2346A557176BF44B007FF38A /* TTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUser.h; sourceTree = "<group>"; };
@@ -175,9 +179,6 @@
 		2346A562176C155E007FF38A /* TweetCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCustomCell.m; sourceTree = "<group>"; };
 		2346A563176C155F007FF38A /* TweetCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCustomCell.xib; sourceTree = "<group>"; };
 		236A46C41760099F00AED2E1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
-		23810D9E175BA08D001676CD /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
-		23810D9F175BA08D001676CD /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
-		23810DA1175BA246001676CD /* MyApps.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyApps.xib; sourceTree = "<group>"; };
 		23810DA3175BA913001676CD /* PGApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGApps.h; sourceTree = "<group>"; };
 		23810DA4175BA913001676CD /* PGApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGApps.m; sourceTree = "<group>"; };
 		23810DAB175BB183001676CD /* MyAppCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAppCell.xib; sourceTree = "<group>"; };
@@ -464,11 +465,11 @@
 			isa = PBXGroup;
 			children = (
 				23810DAB175BB183001676CD /* MyAppCell.xib */,
-				23810D9E175BA08D001676CD /* MyAppsViewController.h */,
-				23810D9F175BA08D001676CD /* MyAppsViewController.m */,
-				23810DA1175BA246001676CD /* MyApps.xib */,
 				23810DA3175BA913001676CD /* PGApps.h */,
 				23810DA4175BA913001676CD /* PGApps.m */,
+				232E86F31777952D00438194 /* MyAppsViewController.h */,
+				232E86F41777952D00438194 /* MyAppsViewController.m */,
+				232E86F51777952D00438194 /* MyAppsViewController.xib */,
 			);
 			path = MyApps;
 			sourceTree = "<group>";
@@ -588,8 +589,8 @@
 				4B23CBC217778709004DA2EF /* TTUser.h in Headers */,
 				4B23CBC317778709004DA2EF /* TTUser+Parse.h in Headers */,
 				4B23CBC417778709004DA2EF /* TTTweet+Parse.h in Headers */,
-				4B23CBC517778763004DA2EF /* MyAppsViewController.h in Headers */,
 				4B23CBC617778763004DA2EF /* PGApps.h in Headers */,
+				232E86F61777952D00438194 /* MyAppsViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +689,6 @@
 				232C4E53175A2FE800C5CDC4 /* TSMiniWebBrowser.xib in Resources */,
 				232C4E61175A303C00C5CDC4 /* PGNewsCell.xib in Resources */,
 				232C4E62175A303C00C5CDC4 /* TelaDeNews.xib in Resources */,
-				23810DA2175BA246001676CD /* MyApps.xib in Resources */,
 				23810DB0175BB183001676CD /* MyAppCell.xib in Resources */,
 				238FF952176AAA8E0080D544 /* TwitterListView.xib in Resources */,
 				2346A565176C155F007FF38A /* TweetCustomCell.xib in Resources */,
@@ -700,6 +700,7 @@
 				23D1BBCC177384A2005A1B2C /* README.rdoc in Resources */,
 				230AE68417752666008A701D /* TwitterUserTweetsViewController.xib in Resources */,
 				232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */,
+				232E86F91777952D00438194 /* MyAppsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,8 +709,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B23CBC71777877A004DA2EF /* MyAppCell.xib in Resources */,
-				4B23CBC81777877A004DA2EF /* MyApps.xib in Resources */,
 				4B23CBBC177786AA004DA2EF /* InfoPlist.strings in Resources */,
+				232E86FA1777952D00438194 /* MyAppsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,7 +778,6 @@
 				232C4E52175A2FE800C5CDC4 /* TSMiniWebBrowser.m in Sources */,
 				232C4E60175A303C00C5CDC4 /* PGNews.m in Sources */,
 				232C4E63175A303C00C5CDC4 /* TelaDeNewsViewController.m in Sources */,
-				23810DA0175BA08D001676CD /* MyAppsViewController.m in Sources */,
 				23810DA5175BA913001676CD /* PGApps.m in Sources */,
 				238FF946176AA4110080D544 /* NSString+STTwitter.m in Sources */,
 				238FF947176AA4110080D544 /* STTwitterAPIWrapper.m in Sources */,
@@ -799,6 +799,7 @@
 				23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */,
 				230AE68317752666008A701D /* TwitterUserTweetsViewController.m in Sources */,
 				232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */,
+				232E86F71777952D00438194 /* MyAppsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */,
+				232E86F81777952D00438194 /* MyAppsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1004,7 @@
 				4B23CBBF177786AA004DA2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
