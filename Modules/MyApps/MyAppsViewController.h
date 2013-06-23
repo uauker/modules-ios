@@ -11,6 +11,7 @@
 #import "EGOCache+PGCache.h"
 #import "PGApps.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIScrollView+SVPullToRefresh.h"
 
 #define URL_HEROKU_MY_APPS @"http://www.uauker.com/api/apps/v1/ios.json"
 
@@ -24,6 +25,7 @@
 // Opcional
 
 @property (nonatomic, strong) UIColor *tableBackgroundColor;
+@property (nonatomic) float minimumTimeInSeconds;
 @property (nonatomic) int cacheTimeInSeconds;
 
 

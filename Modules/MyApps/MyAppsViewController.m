@@ -22,6 +22,10 @@
     if (!self.cacheTimeInSeconds) {
         self.cacheTimeInSeconds = 5 * 60;
     }
+    
+    if (!self.minimumTimeInSeconds) {
+        self.minimumTimeInSeconds = 1.5;
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,25 +45,39 @@
     
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
-    __block NSMutableArray *tmpAppsArray = [[NSMutableArray alloc] init];
+    __block MyAppsViewController *vc = self;
+    __block NSMutableArray *tmpAppsArray;
     
-    [EGOCache setUrl:URL_HEROKU_MY_APPS withTimeoutInterval:self.cacheTimeInSeconds onSuccessPerform:^(NSString *content, BOOL isNew, NSError *error) {
-        if (error == nil && (isNew || self.apps == nil)) {
-            NSDictionary *dic = [content objectFromJSONString];
-            
-            for (NSDictionary *item in [dic objectForKey:@"apps"]) {
-                PGApps *app = [[PGApps alloc] initWithDictionary:item];
-                
-                if (![[[NSBundle mainBundle] bundleIdentifier] isEqualToString:app.bundle]) {
-                    [tmpAppsArray addObject:app];
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, vc.minimumTimeInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+            [EGOCache setUrl:URL_HEROKU_MY_APPS withTimeoutInterval:self.cacheTimeInSeconds onSuccessPerform:^(NSString *content, BOOL isNew, NSError *error) {
+                if (error == nil && (isNew || self.apps == nil)) {
+                    NSDictionary *dic = [content objectFromJSONString];
+                    tmpAppsArray = [[NSMutableArray alloc] init];
+                    
+                    for (NSDictionary *item in [dic objectForKey:@"apps"]) {
+                        PGApps *app = [[PGApps alloc] initWithDictionary:item];
+                        
+                        if (![[[NSBundle mainBundle] bundleIdentifier] isEqualToString:app.bundle]) {
+                            [tmpAppsArray addObject:app];
+                        }
+                    }
                 }
-            }
-        }
+                
+                vc.apps = tmpAppsArray;
+            }];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [vc.tableView reloadData];
+                
+                [vc.tableView.pullToRefreshView stopAnimating];
+            });
+        });
     }];
-    
-    self.apps = tmpAppsArray;
-    
-    [self.tableView reloadData];
+
+    [self.tableView triggerPullToRefresh];   
 }
 
 - (void)didReceiveMemoryWarning
