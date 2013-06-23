@@ -75,6 +75,8 @@
 		232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E2A175A2FE800C5CDC4 /* UIScrollView+SVInfiniteScrolling.m */; };
 		232E870D1777B1B400438194 /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E2B175A2FE800C5CDC4 /* UIScrollView+SVPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E2C175A2FE800C5CDC4 /* UIScrollView+SVPullToRefresh.m */; };
+		232E87551777BC9C00438194 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E24175A2FE700C5CDC4 /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87561777BC9C00438194 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E25175A2FE700C5CDC4 /* NSString+MD5.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -628,6 +630,7 @@
 				232E870A1777B1B400438194 /* SVPullToRefresh.h in Headers */,
 				232E870B1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
 				232E870D1777B1B400438194 /* UIScrollView+SVPullToRefresh.h in Headers */,
+				232E87551777BC9C00438194 /* NSString+MD5.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87561777BC9C00438194 /* NSString+MD5.m in Sources */,
 				232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				232E87091777B0CD00438194 /* PGApps.m in Sources */,
