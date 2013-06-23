@@ -96,6 +96,7 @@
 		4B23CBC617778763004DA2EF /* PGApps.h in Headers */ = {isa = PBXBuildFile; fileRef = 23810DA3175BA913001676CD /* PGApps.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC71777877A004DA2EF /* MyAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23810DAB175BB183001676CD /* MyAppCell.xib */; };
 		4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E1E175A2FE700C5CDC4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		4B23CC101777A7AD004DA2EF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A46C41760099F00AED2E1 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B23CC101777A7AD004DA2EF /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,6 +940,10 @@
 				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "modules-ios/modules-ios-Prefix.pch";
@@ -961,6 +967,10 @@
 				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "modules-ios/modules-ios-Prefix.pch";
