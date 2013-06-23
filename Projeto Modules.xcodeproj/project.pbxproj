@@ -70,6 +70,11 @@
 		232E87071777ADAD00438194 /* EGOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E18175A2FE700C5CDC4 /* EGOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232E87081777ADAD00438194 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E19175A2FE700C5CDC4 /* EGOCache.m */; };
 		232E87091777B0CD00438194 /* PGApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 23810DA4175BA913001676CD /* PGApps.m */; };
+		232E870A1777B1B400438194 /* SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E28175A2FE800C5CDC4 /* SVPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E870B1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E29175A2FE800C5CDC4 /* UIScrollView+SVInfiniteScrolling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E2A175A2FE800C5CDC4 /* UIScrollView+SVInfiniteScrolling.m */; };
+		232E870D1777B1B400438194 /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E2B175A2FE800C5CDC4 /* UIScrollView+SVPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E2C175A2FE800C5CDC4 /* UIScrollView+SVPullToRefresh.m */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -620,6 +625,9 @@
 				4B23CBC417778709004DA2EF /* TTTweet+Parse.h in Headers */,
 				232E86F61777952D00438194 /* MyAppsViewController.h in Headers */,
 				4B23CBC617778763004DA2EF /* PGApps.h in Headers */,
+				232E870A1777B1B400438194 /* SVPullToRefresh.h in Headers */,
+				232E870B1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
+				232E870D1777B1B400438194 /* UIScrollView+SVPullToRefresh.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +844,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				232E87091777B0CD00438194 /* PGApps.m in Sources */,
 				232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */,
 				232E87081777ADAD00438194 /* EGOCache.m in Sources */,
