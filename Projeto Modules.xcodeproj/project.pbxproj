@@ -57,6 +57,18 @@
 		232E86F81777952D00438194 /* MyAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86F41777952D00438194 /* MyAppsViewController.m */; };
 		232E86F91777952D00438194 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F51777952D00438194 /* MyAppsViewController.xib */; };
 		232E86FA1777952D00438194 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232E86F51777952D00438194 /* MyAppsViewController.xib */; };
+		232E86FC1777ACE200438194 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E86FB1777ACE200438194 /* SystemConfiguration.framework */; };
+		232E86FD1777ACF800438194 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D1BBB517738034005A1B2C /* CoreText.framework */; };
+		232E86FE1777ACF800438194 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23810DB1175BB271001676CD /* ImageIO.framework */; };
+		232E86FF1777ACF800438194 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4E64175A321900C5CDC4 /* QuartzCore.framework */; };
+		232E87001777ACF800438194 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE1175A2F1D00C5CDC4 /* UIKit.framework */; };
+		232E87011777ACF800438194 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE3175A2F1D00C5CDC4 /* Foundation.framework */; };
+		232E87021777ACF800438194 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C4DE5175A2F1D00C5CDC4 /* CoreGraphics.framework */; };
+		232E87041777AD0C00438194 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E87031777AD0C00438194 /* CFNetwork.framework */; };
+		232E87051777ADAD00438194 /* EGOCache+PGCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E10175A2FE700C5CDC4 /* EGOCache+PGCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E11175A2FE700C5CDC4 /* EGOCache+PGCache.m */; };
+		232E87071777ADAD00438194 /* EGOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E18175A2FE700C5CDC4 /* EGOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87081777ADAD00438194 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E19175A2FE700C5CDC4 /* EGOCache.m */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -168,6 +180,8 @@
 		232E86F31777952D00438194 /* MyAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppsViewController.h; sourceTree = "<group>"; };
 		232E86F41777952D00438194 /* MyAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppsViewController.m; sourceTree = "<group>"; };
 		232E86F51777952D00438194 /* MyAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAppsViewController.xib; sourceTree = "<group>"; };
+		232E86FB1777ACE200438194 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		232E87031777AD0C00438194 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2346A555176BF44B007FF38A /* TTTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweet.h; sourceTree = "<group>"; };
 		2346A556176BF44B007FF38A /* TTTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweet.m; sourceTree = "<group>"; };
 		2346A557176BF44B007FF38A /* TTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUser.h; sourceTree = "<group>"; };
@@ -245,6 +259,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B23CC101777A7AD004DA2EF /* SDWebImage.framework in Frameworks */,
+				232E86FC1777ACE200438194 /* SystemConfiguration.framework in Frameworks */,
+				232E86FD1777ACF800438194 /* CoreText.framework in Frameworks */,
+				232E86FE1777ACF800438194 /* ImageIO.framework in Frameworks */,
+				232E86FF1777ACF800438194 /* QuartzCore.framework in Frameworks */,
+				232E87041777AD0C00438194 /* CFNetwork.framework in Frameworks */,
+				232E87001777ACF800438194 /* UIKit.framework in Frameworks */,
+				232E87011777ACF800438194 /* Foundation.framework in Frameworks */,
+				232E87021777ACF800438194 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +298,8 @@
 		232C4DE0175A2F1D00C5CDC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				232E87031777AD0C00438194 /* CFNetwork.framework */,
+				232E86FB1777ACE200438194 /* SystemConfiguration.framework */,
 				23D1BBB517738034005A1B2C /* CoreText.framework */,
 				23810DB1175BB271001676CD /* ImageIO.framework */,
 				232C4E64175A321900C5CDC4 /* QuartzCore.framework */,
@@ -587,6 +611,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87051777ADAD00438194 /* EGOCache+PGCache.h in Headers */,
+				232E87071777ADAD00438194 /* EGOCache.h in Headers */,
 				4B23CBC117778709004DA2EF /* TTTweet.h in Headers */,
 				4B23CBC217778709004DA2EF /* TTUser.h in Headers */,
 				4B23CBC317778709004DA2EF /* TTUser+Parse.h in Headers */,
@@ -809,6 +835,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */,
+				232E87081777ADAD00438194 /* EGOCache.m in Sources */,
 				4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */,
 				232E86F81777952D00438194 /* MyAppsViewController.m in Sources */,
 			);
