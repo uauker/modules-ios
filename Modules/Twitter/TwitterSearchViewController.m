@@ -66,8 +66,6 @@
     [self.searchBar resignFirstResponder];
     [self.searchBar setShowsCancelButton:NO animated:YES];
     
-    NSLog(@">>> %@", self.searchBar.text);
-    
     __block TwitterSearchViewController *vc = self;
     __block NSMutableArray *tmpTweets;
     
