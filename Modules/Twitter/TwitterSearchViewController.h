@@ -24,6 +24,11 @@
 @property (nonatomic, copy) NSString *navTitle;
 
 
+// Opcional
+
+@property (nonatomic, copy) NSString *locale;
+
+
 // Privado
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;

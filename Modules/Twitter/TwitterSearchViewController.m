@@ -14,11 +14,15 @@
 
 @implementation TwitterSearchViewController
 
+- (void)initWithVariables {
+    self.locale = @"pt-BR";
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self initWithVariables];
     }
     return self;
 }
@@ -66,12 +70,14 @@
     [self.searchBar resignFirstResponder];
     [self.searchBar setShowsCancelButton:NO animated:YES];
     
+    [self initWithVariables];
+    
     __block TwitterSearchViewController *vc = self;
     __block NSMutableArray *tmpTweets;
     
-    STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];    
+    STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
     
-    [twitter getSearchTweetsWithQuery:self.searchBar.text successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+    [twitter getSearchTweetsWithQuery:self.searchBar.text locale:vc.locale successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
         tmpTweets = [[NSMutableArray alloc] init];
         
         for (NSDictionary *dictionary in statuses) {

@@ -428,6 +428,24 @@ id removeNull(id rootObject);
     }];
 }
 
+- (void)getSearchTweetsWithQuery:(NSString *)q
+                        locale:(NSString *)locale
+					successBlock:(void(^)(NSDictionary *searchMetadata, NSArray *statuses))successBlock
+                      errorBlock:(void(^)(NSError *error))errorBlock {
+ 
+    NSDictionary *d = @{@"q" : q, @"locale" : locale};
+    
+    [_oauth getResource:@"search/tweets.json" parameters:d successBlock:^(id response) {
+        
+        NSDictionary *searchMetadata = [response valueForKey:@"search_metadata"];
+        NSArray *statuses = [response valueForKey:@"statuses"];
+        
+        successBlock(searchMetadata, statuses);
+    } errorBlock:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
+
 #pragma mark Streaming
 
 #pragma mark Direct Messages
