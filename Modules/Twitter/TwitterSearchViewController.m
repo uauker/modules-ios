@@ -68,8 +68,15 @@
     
     NSLog(@">>> %@", self.searchBar.text);
     
+    STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];    
     
-    [[self tableView] reloadData];
+    [twitter getSearchTweetsWithQuery:self.searchBar.text successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+        NSLog(@"%@", [statuses description]);
+        
+        [[self tableView] reloadData];
+    } errorBlock:^(NSError *error) {
+        NSLog(@"%@", [error description]);
+    }];
 }
 
 
