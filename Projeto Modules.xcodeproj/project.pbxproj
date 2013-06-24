@@ -77,6 +77,53 @@
 		232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E2C175A2FE800C5CDC4 /* UIScrollView+SVPullToRefresh.m */; };
 		232E87551777BC9C00438194 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E24175A2FE700C5CDC4 /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232E87561777BC9C00438194 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E25175A2FE700C5CDC4 /* NSString+MD5.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87631777C17900438194 /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D1BBB8177384A2005A1B2C /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87641777C17900438194 /* TwitterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D1BBBE177384A2005A1B2C /* TwitterText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87651777C17900438194 /* TwitterTextEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D1BBC0177384A2005A1B2C /* TwitterTextEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87661777C17900438194 /* NSString+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF936176AA4110080D544 /* NSString+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87671777C17900438194 /* STTwitterAPIWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF938176AA4110080D544 /* STTwitterAPIWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87681777C17900438194 /* STTwitterAppOnly.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF93A176AA4110080D544 /* STTwitterAppOnly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87691777C17900438194 /* STTwitterHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF93C176AA4110080D544 /* STTwitterHTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876A1777C17900438194 /* STTwitterOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF93E176AA4110080D544 /* STTwitterOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876B1777C17900438194 /* STTwitterOAuthOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF940176AA4110080D544 /* STTwitterOAuthOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876C1777C17900438194 /* STTwitterOAuthProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF942176AA4110080D544 /* STTwitterOAuthProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876D1777C17900438194 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF944176AA4110080D544 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876E1777C17900438194 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E1D175A2FE700C5CDC4 /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E876F1777C17900438194 /* NSDate+HumanInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E21175A2FE700C5CDC4 /* NSDate+HumanInterval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87701777C17900438194 /* TSMiniWebBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E35175A2FE800C5CDC4 /* TSMiniWebBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87711777C17900438194 /* TweetCustomCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A561176C155E007FF38A /* TweetCustomCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87721777C17900438194 /* TwitterListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 238FF94E176AA6190080D544 /* TwitterListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87731777C17900438194 /* TwitterTweetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E1951317727927003FF267 /* TwitterTweetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87741777C17900438194 /* TwitterUserTweetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 230AE68017752666008A701D /* TwitterUserTweetsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87751777C17900438194 /* TwitterUserListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 232E86EE177678A100438194 /* TwitterUserListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87761777C17900438194 /* PGNews.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E5A175A303C00C5CDC4 /* PGNews.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87771777C17900438194 /* TelaDeNewsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E5E175A303C00C5CDC4 /* TelaDeNewsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		232E87781777C2C000438194 /* NSString+PGString.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBCE1773959B005A1B2C /* NSString+PGString.m */; };
+		232E87791777C2C000438194 /* NSDate+PGDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E13175A2FE700C5CDC4 /* NSDate+PGDate.m */; };
+		232E877A1777C2C000438194 /* TSMiniWebBrowser+PGBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E15175A2FE700C5CDC4 /* TSMiniWebBrowser+PGBrowser.m */; };
+		232E877B1777C2C000438194 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBB9177384A2005A1B2C /* TTTAttributedLabel.m */; };
+		232E877C1777C2C000438194 /* TwitterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBBF177384A2005A1B2C /* TwitterText.m */; };
+		232E877D1777C2C000438194 /* TwitterTextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBC1177384A2005A1B2C /* TwitterTextEntity.m */; };
+		232E877E1777C2C000438194 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF937176AA4110080D544 /* NSString+STTwitter.m */; };
+		232E877F1777C2C000438194 /* STTwitterAPIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF939176AA4110080D544 /* STTwitterAPIWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87801777C2C000438194 /* STTwitterAppOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF93B176AA4110080D544 /* STTwitterAppOnly.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87811777C2C000438194 /* STTwitterHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF93D176AA4110080D544 /* STTwitterHTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87821777C2C000438194 /* STTwitterOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF93F176AA4110080D544 /* STTwitterOAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87831777C2C000438194 /* STTwitterOAuthOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF941176AA4110080D544 /* STTwitterOAuthOSX.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87841777C2C000438194 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF945176AA4110080D544 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		232E87851777C2C000438194 /* NSDate+HumanInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E22175A2FE700C5CDC4 /* NSDate+HumanInterval.m */; };
+		232E87861777C2C000438194 /* TSMiniWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E36175A2FE800C5CDC4 /* TSMiniWebBrowser.m */; };
+		232E87871777C2C000438194 /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
+		232E87881777C2C000438194 /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
+		232E87891777C2C000438194 /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
+		232E878A1777C2C000438194 /* TTTweet+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55F176C086C007FF38A /* TTTweet+Parse.m */; };
+		232E878B1777C2C000438194 /* TweetCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A562176C155E007FF38A /* TweetCustomCell.m */; };
+		232E878C1777C2C000438194 /* TwitterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238FF94F176AA6190080D544 /* TwitterListViewController.m */; };
+		232E878D1777C2C000438194 /* TwitterTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1951417727927003FF267 /* TwitterTweetViewController.m */; };
+		232E878E1777C2C000438194 /* TwitterUserTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230AE68117752666008A701D /* TwitterUserTweetsViewController.m */; };
+		232E878F1777C2C000438194 /* TwitterUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86EF177678A100438194 /* TwitterUserListViewController.m */; };
+		232E87901777C2C000438194 /* PGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5B175A303C00C5CDC4 /* PGNews.m */; };
+		232E87911777C2C000438194 /* TelaDeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -266,13 +313,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87001777ACF800438194 /* UIKit.framework in Frameworks */,
 				4B23CC101777A7AD004DA2EF /* SDWebImage.framework in Frameworks */,
 				232E86FC1777ACE200438194 /* SystemConfiguration.framework in Frameworks */,
 				232E86FD1777ACF800438194 /* CoreText.framework in Frameworks */,
 				232E86FE1777ACF800438194 /* ImageIO.framework in Frameworks */,
 				232E86FF1777ACF800438194 /* QuartzCore.framework in Frameworks */,
 				232E87041777AD0C00438194 /* CFNetwork.framework in Frameworks */,
-				232E87001777ACF800438194 /* UIKit.framework in Frameworks */,
 				232E87011777ACF800438194 /* Foundation.framework in Frameworks */,
 				232E87021777ACF800438194 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -630,6 +677,27 @@
 				232E870A1777B1B400438194 /* SVPullToRefresh.h in Headers */,
 				232E870B1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
 				232E870D1777B1B400438194 /* UIScrollView+SVPullToRefresh.h in Headers */,
+				232E87631777C17900438194 /* TTTAttributedLabel.h in Headers */,
+				232E87641777C17900438194 /* TwitterText.h in Headers */,
+				232E87651777C17900438194 /* TwitterTextEntity.h in Headers */,
+				232E87661777C17900438194 /* NSString+STTwitter.h in Headers */,
+				232E87671777C17900438194 /* STTwitterAPIWrapper.h in Headers */,
+				232E87681777C17900438194 /* STTwitterAppOnly.h in Headers */,
+				232E87691777C17900438194 /* STTwitterHTML.h in Headers */,
+				232E876A1777C17900438194 /* STTwitterOAuth.h in Headers */,
+				232E876B1777C17900438194 /* STTwitterOAuthOSX.h in Headers */,
+				232E876C1777C17900438194 /* STTwitterOAuthProtocol.h in Headers */,
+				232E876D1777C17900438194 /* STHTTPRequest.h in Headers */,
+				232E876E1777C17900438194 /* JSONKit.h in Headers */,
+				232E876F1777C17900438194 /* NSDate+HumanInterval.h in Headers */,
+				232E87701777C17900438194 /* TSMiniWebBrowser.h in Headers */,
+				232E87711777C17900438194 /* TweetCustomCell.h in Headers */,
+				232E87721777C17900438194 /* TwitterListViewController.h in Headers */,
+				232E87731777C17900438194 /* TwitterTweetViewController.h in Headers */,
+				232E87741777C17900438194 /* TwitterUserTweetsViewController.h in Headers */,
+				232E87751777C17900438194 /* TwitterUserListViewController.h in Headers */,
+				232E87761777C17900438194 /* PGNews.h in Headers */,
+				232E87771777C17900438194 /* TelaDeNewsViewController.h in Headers */,
 				232E87551777BC9C00438194 /* NSString+MD5.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,6 +915,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232E87781777C2C000438194 /* NSString+PGString.m in Sources */,
+				232E87791777C2C000438194 /* NSDate+PGDate.m in Sources */,
+				232E877A1777C2C000438194 /* TSMiniWebBrowser+PGBrowser.m in Sources */,
+				232E877B1777C2C000438194 /* TTTAttributedLabel.m in Sources */,
+				232E877C1777C2C000438194 /* TwitterText.m in Sources */,
+				232E877D1777C2C000438194 /* TwitterTextEntity.m in Sources */,
+				232E877E1777C2C000438194 /* NSString+STTwitter.m in Sources */,
+				232E877F1777C2C000438194 /* STTwitterAPIWrapper.m in Sources */,
+				232E87801777C2C000438194 /* STTwitterAppOnly.m in Sources */,
+				232E87811777C2C000438194 /* STTwitterHTML.m in Sources */,
+				232E87821777C2C000438194 /* STTwitterOAuth.m in Sources */,
+				232E87831777C2C000438194 /* STTwitterOAuthOSX.m in Sources */,
+				232E87841777C2C000438194 /* STHTTPRequest.m in Sources */,
+				232E87851777C2C000438194 /* NSDate+HumanInterval.m in Sources */,
+				232E87861777C2C000438194 /* TSMiniWebBrowser.m in Sources */,
+				232E87871777C2C000438194 /* TTTweet.m in Sources */,
+				232E87881777C2C000438194 /* TTUser.m in Sources */,
+				232E87891777C2C000438194 /* TTUser+Parse.m in Sources */,
+				232E878A1777C2C000438194 /* TTTweet+Parse.m in Sources */,
+				232E878B1777C2C000438194 /* TweetCustomCell.m in Sources */,
+				232E878C1777C2C000438194 /* TwitterListViewController.m in Sources */,
+				232E878D1777C2C000438194 /* TwitterTweetViewController.m in Sources */,
+				232E878E1777C2C000438194 /* TwitterUserTweetsViewController.m in Sources */,
+				232E878F1777C2C000438194 /* TwitterUserListViewController.m in Sources */,
+				232E87901777C2C000438194 /* PGNews.m in Sources */,
+				232E87911777C2C000438194 /* TelaDeNewsViewController.m in Sources */,
 				232E87561777BC9C00438194 /* NSString+MD5.m in Sources */,
 				232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */,

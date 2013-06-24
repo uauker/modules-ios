@@ -20,6 +20,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*
  Partial Objective-C front-end for https://dev.twitter.com/docs/api/1.1
