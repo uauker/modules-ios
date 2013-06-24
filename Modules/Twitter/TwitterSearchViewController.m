@@ -35,4 +35,114 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.searchBar resignFirstResponder];
+    [self.searchBar setShowsCancelButton:NO animated:YES];
+}
+
+
+#pragma mark - UISearchBar
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    [searchBar setShowsCancelButton:YES animated:YES];
+    
+    //Setando o botao cancelar
+    UIButton *cancelButton = nil;
+    for (UIView *subView in [[self searchBar] subviews]) {
+        if ([subView isKindOfClass:UIButton.class]) {
+            cancelButton = (UIButton*)subView;
+        }
+    }
+    
+    if (cancelButton) {
+        [cancelButton setTitle:NSLocalizedString(@"cancel", nil) forState:UIControlStateNormal];
+        [cancelButton sizeToFit];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.searchBar resignFirstResponder];
+    [self.searchBar setShowsCancelButton:NO animated:YES];
+    
+    NSLog(@">>> %@", self.searchBar.text);
+    
+    
+    [[self tableView] reloadData];
+}
+
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+	[searchBar resignFirstResponder];
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+    [textField setText:@""];
+    //    [self performSelector:@selector(searchBarCancelButtonClicked:) withObject:[self searchBar] afterDelay: 0.1];
+    return YES;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"TweetCustomCell";
+    
+    TweetCustomCell *cell = (TweetCustomCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+    	NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
+    	cell = (TweetCustomCell *)[nib objectAtIndex:0];
+    }
+    
+//    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+//    
+//    [cell setTweet:tweet];
+//    [cell load];
+//    
+//    //TextView
+//    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+//    
+//    if (!textView) {
+//        textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
+//        textView.backgroundColor = [UIColor clearColor];
+//        textView.tag = 5;
+//        textView.editable = NO;
+//        textView.scrollEnabled = NO;
+//        textView.userInteractionEnabled = NO;
+//        textView.dataDetectorTypes = UIDataDetectorTypeNone;
+//    }
+//    
+//    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+//                                [UIFont systemFontOfSize:14], NSFontAttributeName,
+//                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
+//    
+//    textView.attributedText = [[NSMutableAttributedString alloc] initWithString:tweet.text attributes:attributes];
+//    
+//    [cell.contentView addSubview:textView];
+//    CGRect frame = textView.frame;
+//    frame.size.height = textView.contentSize.height;
+//    textView.frame = frame;
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+    int partialCellSize = (textView.frame.size.height < 35) ? 38 : textView.frame.size.height;
+    
+    return 27 + partialCellSize;
+}
+
+
 @end

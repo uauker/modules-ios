@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetCustomCell.h"
 
-@interface TwitterSearchViewController : UIViewController
+@interface TwitterSearchViewController : UIViewController <UISearchDisplayDelegate, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 // Obrigatorio
 
