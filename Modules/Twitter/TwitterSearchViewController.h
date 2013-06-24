@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "STTwitterAPIWrapper.h"
 #import "TweetCustomCell.h"
+#import "TTTweet+Parse.h"
 
 #define K_TWITTER_CONSUMER_NAME @"Trânsito Rio"
 #define K_TWITTER_CONSUMER_KEY @"WPDngmoDgU7SgRinKG5A"
@@ -27,5 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *tweets;
 
 @end

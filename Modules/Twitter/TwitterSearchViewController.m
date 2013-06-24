@@ -68,10 +68,20 @@
     
     NSLog(@">>> %@", self.searchBar.text);
     
+    __block TwitterSearchViewController *vc = self;
+    __block NSMutableArray *tmpTweets;
+    
     STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];    
     
     [twitter getSearchTweetsWithQuery:self.searchBar.text successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
-        NSLog(@"%@", [statuses description]);
+        tmpTweets = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *dictionary in statuses) {
+            TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
+            [tmpTweets addObject:tweet];
+        }
+        
+        vc.tweets = tmpTweets;
         
         [[self tableView] reloadData];
     } errorBlock:^(NSError *error) {
@@ -98,7 +108,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [self.tweets count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,34 +121,34 @@
     	cell = (TweetCustomCell *)[nib objectAtIndex:0];
     }
     
-//    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
-//    
-//    [cell setTweet:tweet];
-//    [cell load];
-//    
-//    //TextView
-//    UITextView *textView = (UITextView *)[cell viewWithTag:5];
-//    
-//    if (!textView) {
-//        textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
-//        textView.backgroundColor = [UIColor clearColor];
-//        textView.tag = 5;
-//        textView.editable = NO;
-//        textView.scrollEnabled = NO;
-//        textView.userInteractionEnabled = NO;
-//        textView.dataDetectorTypes = UIDataDetectorTypeNone;
-//    }
-//    
-//    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                                [UIFont systemFontOfSize:14], NSFontAttributeName,
-//                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
-//    
-//    textView.attributedText = [[NSMutableAttributedString alloc] initWithString:tweet.text attributes:attributes];
-//    
-//    [cell.contentView addSubview:textView];
-//    CGRect frame = textView.frame;
-//    frame.size.height = textView.contentSize.height;
-//    textView.frame = frame;
+    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+    
+    [cell setTweet:tweet];
+    [cell load];
+    
+    //TextView
+    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+    
+    if (!textView) {
+        textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
+        textView.backgroundColor = [UIColor clearColor];
+        textView.tag = 5;
+        textView.editable = NO;
+        textView.scrollEnabled = NO;
+        textView.userInteractionEnabled = NO;
+        textView.dataDetectorTypes = UIDataDetectorTypeNone;
+    }
+    
+    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIFont systemFontOfSize:14], NSFontAttributeName,
+                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
+    
+    textView.attributedText = [[NSMutableAttributedString alloc] initWithString:tweet.text attributes:attributes];
+    
+    [cell.contentView addSubview:textView];
+    CGRect frame = textView.frame;
+    frame.size.height = textView.contentSize.height;
+    textView.frame = frame;
     
     return cell;
 }
