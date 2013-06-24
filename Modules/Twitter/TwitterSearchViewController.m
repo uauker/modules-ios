@@ -95,7 +95,7 @@
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
     [textField setText:@""];
-    //    [self performSelector:@selector(searchBarCancelButtonClicked:) withObject:[self searchBar] afterDelay: 0.1];
+
     return YES;
 }
 
