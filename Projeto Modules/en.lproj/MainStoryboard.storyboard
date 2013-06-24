@@ -148,6 +148,9 @@
             <objects>
                 <viewController id="7GG-M0-jQe" customClass="TwitterSearchViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nN6-Wj-kv5"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="navTitle" value="Busca"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYQ-3n-Gdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

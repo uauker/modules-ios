@@ -15,7 +15,13 @@
 @implementation TwitterSearchViewController
 
 - (void)initWithVariables {
-    self.locale = @"pt-BR";
+    if (!self.locale) {
+        self.locale = @"pt-BR";
+    }
+    
+    if (!self.tableBackgroundColor) {
+        self.tableBackgroundColor = [UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.0];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,7 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    [self.navigationItem setTitle:self.navTitle];
+    
+    [[self tableView] setBackgroundColor:self.tableBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning

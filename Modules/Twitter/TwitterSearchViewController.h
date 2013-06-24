@@ -26,6 +26,8 @@
 
 // Opcional
 
+@property (nonatomic, strong) UIColor *tableBackgroundColor;
+
 @property (nonatomic, copy) NSString *locale;
 
 
