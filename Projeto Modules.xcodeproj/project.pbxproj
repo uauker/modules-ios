@@ -155,6 +155,11 @@
 		23D1BBCF1773959B005A1B2C /* NSString+PGString.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1BBCE1773959B005A1B2C /* NSString+PGString.m */; };
 		23E1951617727927003FF267 /* TwitterTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1951417727927003FF267 /* TwitterTweetViewController.m */; };
 		23E1951717727927003FF267 /* TwitterTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1951517727927003FF267 /* TwitterTweetViewController.xib */; };
+		4B201DD91778FE9C00B1BF34 /* TwitterSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B201DD61778FE9C00B1BF34 /* TwitterSearchViewController.h */; };
+		4B201DDA1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */; };
+		4B201DDB1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */; };
+		4B201DDC1778FE9C00B1BF34 /* TwitterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B201DD81778FE9C00B1BF34 /* TwitterSearchViewController.xib */; };
+		4B201DDD1778FE9C00B1BF34 /* TwitterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B201DD81778FE9C00B1BF34 /* TwitterSearchViewController.xib */; };
 		4B23CBBC177786AA004DA2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B23CBBA177786AA004DA2EF /* InfoPlist.strings */; };
 		4B23CBC117778709004DA2EF /* TTTweet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A555176BF44B007FF38A /* TTTweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B23CBC217778709004DA2EF /* TTUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346A557176BF44B007FF38A /* TTUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -288,6 +293,9 @@
 		23E1951317727927003FF267 /* TwitterTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTweetViewController.h; sourceTree = "<group>"; };
 		23E1951417727927003FF267 /* TwitterTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTweetViewController.m; sourceTree = "<group>"; };
 		23E1951517727927003FF267 /* TwitterTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTweetViewController.xib; sourceTree = "<group>"; };
+		4B201DD61778FE9C00B1BF34 /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
+		4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchViewController.m; sourceTree = "<group>"; };
+		4B201DD81778FE9C00B1BF34 /* TwitterSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterSearchViewController.xib; sourceTree = "<group>"; };
 		4B23CBB6177786AA004DA2EF /* modules-ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "modules-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B23CBB9177786AA004DA2EF /* modules-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "modules-ios-Info.plist"; sourceTree = "<group>"; };
 		4B23CBBB177786AA004DA2EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -604,6 +612,9 @@
 				232E86EE177678A100438194 /* TwitterUserListViewController.h */,
 				232E86EF177678A100438194 /* TwitterUserListViewController.m */,
 				232E86F0177678A100438194 /* TwitterUserListViewController.xib */,
+				4B201DD61778FE9C00B1BF34 /* TwitterSearchViewController.h */,
+				4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */,
+				4B201DD81778FE9C00B1BF34 /* TwitterSearchViewController.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -699,6 +710,7 @@
 				232E87761777C17900438194 /* PGNews.h in Headers */,
 				232E87771777C17900438194 /* TelaDeNewsViewController.h in Headers */,
 				232E87551777BC9C00438194 /* NSString+MD5.h in Headers */,
+				4B201DD91778FE9C00B1BF34 /* TwitterSearchViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +821,7 @@
 				230AE68417752666008A701D /* TwitterUserTweetsViewController.xib in Resources */,
 				232E86F2177678A100438194 /* TwitterUserListViewController.xib in Resources */,
 				232E86F91777952D00438194 /* MyAppsViewController.xib in Resources */,
+				4B201DDC1778FE9C00B1BF34 /* TwitterSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +832,7 @@
 				4B23CBC71777877A004DA2EF /* MyAppCell.xib in Resources */,
 				4B23CBBC177786AA004DA2EF /* InfoPlist.strings in Resources */,
 				232E86FA1777952D00438194 /* MyAppsViewController.xib in Resources */,
+				4B201DDD1778FE9C00B1BF34 /* TwitterSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +922,7 @@
 				230AE68317752666008A701D /* TwitterUserTweetsViewController.m in Sources */,
 				232E86F1177678A100438194 /* TwitterUserListViewController.m in Sources */,
 				232E86F71777952D00438194 /* MyAppsViewController.m in Sources */,
+				4B201DDA1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +964,7 @@
 				232E87081777ADAD00438194 /* EGOCache.m in Sources */,
 				4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */,
 				232E86F81777952D00438194 /* MyAppsViewController.m in Sources */,
+				4B201DDB1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
