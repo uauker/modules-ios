@@ -139,24 +139,7 @@
     
     //TextView
     UITextView *textView = (UITextView *)[cell viewWithTag:5];
-    
-    if (!textView) {
-        textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
-        textView.backgroundColor = [UIColor clearColor];
-        textView.tag = 5;
-        textView.editable = NO;
-        textView.scrollEnabled = NO;
-        textView.userInteractionEnabled = NO;
-        textView.dataDetectorTypes = UIDataDetectorTypeNone;
-    }
-    
-    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIFont systemFontOfSize:14], NSFontAttributeName,
-                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
-    
-    textView.attributedText = [[NSMutableAttributedString alloc] initWithString:tweet.text attributes:attributes];
-    
-    [cell.contentView addSubview:textView];
+
     CGRect frame = textView.frame;
     frame.size.height = textView.contentSize.height;
     textView.frame = frame;

@@ -143,7 +143,6 @@
     //TextView
     UITextView *textView = (UITextView *)[cell viewWithTag:5];
     
-//    [cell.contentView addSubview:textView];
     CGRect frame = textView.frame;
     frame.size.height = textView.contentSize.height;
     textView.frame = frame;
