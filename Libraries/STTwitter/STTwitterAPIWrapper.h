@@ -186,6 +186,11 @@
 					successBlock:(void(^)(NSDictionary *searchMetadata, NSArray *statuses))successBlock
                       errorBlock:(void(^)(NSError *error))errorBlock;
 
+- (void)getSearchTweetsWithQuery:(NSString *)q
+                          maxID:(NSString *)maxID
+					successBlock:(void(^)(NSDictionary *searchMetadata, NSArray *statuses))successBlock
+                      errorBlock:(void(^)(NSError *error))errorBlock;
+
 #pragma mark Streaming
 
 //	POST	statuses/filter

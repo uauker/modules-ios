@@ -10,6 +10,8 @@
 #import "STTwitterAPIWrapper.h"
 #import "TweetCustomCell.h"
 #import "TTTweet+Parse.h"
+#import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 
 #define K_TWITTER_CONSUMER_NAME @"Trânsito Rio"
 #define K_TWITTER_CONSUMER_KEY @"WPDngmoDgU7SgRinKG5A"

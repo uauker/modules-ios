@@ -40,6 +40,55 @@
     [self.navigationItem setTitle:self.navTitle];
     
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];
+    
+    __block TwitterSearchViewController *vc = self;
+    __block NSMutableArray *tmpTweets;
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        
+        [twitter getSearchTweetsWithQuery:self.searchBar.text locale:@"pt-BR" successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+            tmpTweets = [[NSMutableArray alloc] init];
+            
+            for (NSDictionary *dictionary in statuses) {
+                TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
+                [tmpTweets addObject:tweet];
+            }
+            
+            vc.tweets = tmpTweets;
+            
+            [[self tableView] reloadData];
+            
+            [vc.tableView.pullToRefreshView stopAnimating];
+        } errorBlock:^(NSError *error) {
+            NSLog(@"%@", [error description]);
+            
+            [vc.tableView.pullToRefreshView stopAnimating];
+        }];
+    }];
+    
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        
+        NSString *lastTweetId = [[vc.tweets lastObject] identifier];
+        
+        [twitter getSearchTweetsWithQuery:self.searchBar.text maxID:lastTweetId successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+            for (NSDictionary *dictionary in statuses) {
+                if (![lastTweetId isEqualToString:[dictionary objectForKey:@"id_str"]]) {
+                    TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
+                    [vc.tweets addObject:tweet];
+                }
+            }
+            
+            [vc.tableView reloadData];
+            
+            [vc.tableView.infiniteScrollingView stopAnimating];
+        } errorBlock:^(NSError *error) {
+            NSLog(@"%@", [error description]);
+            
+            [vc.tableView.infiniteScrollingView stopAnimating];
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,27 +128,9 @@
     [self.searchBar resignFirstResponder];
     [self.searchBar setShowsCancelButton:NO animated:YES];
     
-    [self initWithVariables];
+//    [self initWithVariables];
     
-    __block TwitterSearchViewController *vc = self;
-    __block NSMutableArray *tmpTweets;
-    
-    STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
-    
-    [twitter getSearchTweetsWithQuery:self.searchBar.text locale:vc.locale successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
-        tmpTweets = [[NSMutableArray alloc] init];
-        
-        for (NSDictionary *dictionary in statuses) {
-            TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
-            [tmpTweets addObject:tweet];
-        }
-        
-        vc.tweets = tmpTweets;
-        
-        [[self tableView] reloadData];
-    } errorBlock:^(NSError *error) {
-        NSLog(@"%@", [error description]);
-    }];
+    [self.tableView triggerPullToRefresh];
 }
 
 
