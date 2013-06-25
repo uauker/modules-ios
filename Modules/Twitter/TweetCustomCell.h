@@ -19,7 +19,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *username;
 @property (nonatomic, weak) IBOutlet UILabel *date;
 @property (nonatomic, weak) IBOutlet UIImageView *image;
-@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, strong) IBOutlet UITextView *textView;
 
 - (void)load;
 

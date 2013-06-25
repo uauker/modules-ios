@@ -53,6 +53,27 @@
     self.username.text = [self.tweet.user name];
     
     self.date.text = [[self.tweet publishedAt] humanIntervalAgoSinceNow];
+    
+    
+    //TextView
+    if (!self.textView) {
+        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
+        self.textView.backgroundColor = [UIColor clearColor];
+        self.textView.tag = 5;
+        self.textView.editable = NO;
+        self.textView.scrollEnabled = NO;
+        self.textView.userInteractionEnabled = NO;
+        self.textView.dataDetectorTypes = UIDataDetectorTypeNone;
+        self.textView.hidden = NO;
+    }
+    
+    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIFont systemFontOfSize:14], NSFontAttributeName,
+                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
+    
+    self.textView.attributedText = [[NSMutableAttributedString alloc] initWithString:self.tweet.text attributes:attributes];
+    
+    [self.contentView addSubview:self.textView];
 }
 
 @end
