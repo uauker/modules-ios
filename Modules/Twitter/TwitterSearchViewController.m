@@ -205,5 +205,16 @@
     return 27 + partialCellSize;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    
+    TTTweet *tweet = [self.tweets objectAtIndex:[indexPath row]];
+    
+    TwitterTweetViewController *tweetViewController = [[TwitterTweetViewController alloc] initWithNibName:@"TwitterTweetViewController" bundle:nil];
+    tweetViewController.tweet = tweet;
+    tweetViewController.canAccessUserTweets = YES;
+    
+    [self.navigationController pushViewController:tweetViewController animated:YES];
+}
 
 @end
