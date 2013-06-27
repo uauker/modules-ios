@@ -689,12 +689,6 @@ id removeNull(id rootObject);
 
 #pragma mark Lists
 
-- (void)getListWithScreenName:(NSString *)screenName
-                      successBlock:(void(^)(NSArray *statuses))successBlock
-                        errorBlock:(void(^)(NSError *error))errorBlock {
-    [self getTimeline:@"lists/list.json" withParameters:@{ @"screen_name" : screenName } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
-}
-
 - (void)getUserListWithListID:(NSString *)listID
                  successBlock:(void(^)(NSArray *statuses))successBlock
                    errorBlock:(void(^)(NSError *error))errorBlock {
@@ -722,6 +716,13 @@ id removeNull(id rootObject);
                    successBlock:(void(^)(NSArray *statuses))successBlock
                      errorBlock:(void(^)(NSError *error))errorBlock {
     [self getTimeline:@"lists/statuses.json" withParameters:@{ @"slug" : listName, @"owner_screen_name" : ownerScreenName, @"max_id" : maxId } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
+}
+
+- (void)getMembersListWithListName:(NSString *)listName
+                   ownerScreenName:(NSString *)ownerScreenName
+                      successBlock:(void(^)(NSArray *statuses))successBlock
+                        errorBlock:(void(^)(NSError *error))errorBlock {
+    [self getTimeline:@"lists/members.json" withParameters:@{ @"slug" : @"transito-rj", @"owner_screen_name" : @"uauker" } sinceID:nil count:NSNotFound successBlock:successBlock errorBlock:errorBlock];
 }
 
 #pragma mark Saved Searches

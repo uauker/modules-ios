@@ -363,10 +363,6 @@
 
 //	GET		lists/list
 
-- (void)getListWithScreenName:(NSString *)screenName
-                 successBlock:(void(^)(NSArray *statuses))successBlock
-                   errorBlock:(void(^)(NSError *error))errorBlock;
-
 //	GET		lists/statuses
 
 - (void)getUserListWithListID:(NSString *)listID
@@ -407,6 +403,11 @@
 //	GET		lists/members/show
 
 //	GET		lists/members
+
+- (void)getMembersListWithListName:(NSString *)listName
+                   ownerScreenName:(NSString *)ownerScreenName
+                      successBlock:(void(^)(NSArray *statuses))successBlock
+                        errorBlock:(void(^)(NSError *error))errorBlock;
 
 //	POST	lists/members/create
 

@@ -57,6 +57,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="yAX-hA-G7E" kind="relationship" relationship="viewControllers" id="Qfb-55-HN8"/>
                         <segue destination="tZG-ba-3x8" kind="relationship" relationship="viewControllers" id="EOd-KY-BS1"/>
                         <segue destination="Jyx-9k-JOS" kind="relationship" relationship="viewControllers" id="0NR-VF-xgT"/>
                         <segue destination="UEJ-Sc-qtT" kind="relationship" relationship="viewControllers" id="26"/>
@@ -66,6 +67,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Twitter User List View Controller-->
+        <scene sceneID="ltZ-kA-BRa">
+            <objects>
+                <viewController id="iBa-GC-akc" customClass="TwitterUserListViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hwt-eW-ho6"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="listname" value="transito-rj"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="username" value="uauker"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zC-KE-4cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="2843"/>
         </scene>
         <!--Navigation Controller - First-->
         <scene sceneID="ikR-WN-0KX">
@@ -175,6 +190,25 @@
             </objects>
             <point key="canvasLocation" x="915" y="2034"/>
         </scene>
+        <!--Navigation Controller - Members-->
+        <scene sceneID="Pma-6E-sfu">
+            <objects>
+                <navigationController id="yAX-hA-G7E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Members" id="jNz-E2-leV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fJS-0g-2WP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iBa-GC-akc" kind="relationship" relationship="rootViewController" id="tKH-mP-8QA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncx-fd-vRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="2843"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>
@@ -199,6 +233,9 @@
                 <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="TwitterUserListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterUserListViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
