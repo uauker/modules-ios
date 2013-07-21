@@ -20,6 +20,7 @@
 
 //
 
+@property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic, strong) UIColor *tableBackgroundColor;
 @property (nonatomic) float minimumTimeInSeconds;
 @property (nonatomic) int cacheTimeInSeconds;

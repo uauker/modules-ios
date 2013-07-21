@@ -26,6 +26,10 @@
     if (!self.cacheTimeInSeconds) {
         self.cacheTimeInSeconds = 5 * 60;
     }
+    
+    if (self.textColor) {
+        self.textColor = [UIColor colorWithRed:0/255.f green:0/255.f blue:0/255.f alpha:1.0];
+    }
 }
 
 - (void)loadView
@@ -123,8 +127,13 @@
     UILabel *dateView = (UILabel *)[cell viewWithTag:1];
     
     sourceView.text = pgNews.siteTitle;
+    sourceView.textColor = self.textColor;
+    
     textView.text = pgNews.title;
+    textView.textColor = self.textColor;
+    
     dateView.text = [pgNews.createdAt humanIntervalAgoSinceNow];
+    dateView.textColor = self.textColor;
     
     return cell;
 }
