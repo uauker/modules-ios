@@ -27,7 +27,7 @@
         self.cacheTimeInSeconds = 5 * 60;
     }
     
-    if (self.textColor) {
+    if (!self.textColor) {
         self.textColor = [UIColor colorWithRed:0/255.f green:0/255.f blue:0/255.f alpha:1.0];
     }
 }
