@@ -65,25 +65,6 @@
 
             [vc.tableView.pullToRefreshView stopAnimating];
         }];
-        
-//        [twitter getSearchTweetsWithQuery:self.searchBar.text locale:@"pt-BR" successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
-//            tmpTweets = [[NSMutableArray alloc] init];
-//            
-//            for (NSDictionary *dictionary in statuses) {
-//                TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
-//                [tmpTweets addObject:tweet];
-//            }
-//            
-//            vc.tweets = tmpTweets;
-//            
-//            [[self tableView] reloadData];
-//            
-//            [vc.tableView.pullToRefreshView stopAnimating];
-//        } errorBlock:^(NSError *error) {
-//            NSLog(@"%@", [error description]);
-//            
-//            [vc.tableView.pullToRefreshView stopAnimating];
-//        }];
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
