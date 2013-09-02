@@ -47,7 +47,7 @@
     [self.tableView addPullToRefreshWithActionHandler:^{
         tmpTweets = [[NSMutableArray alloc] init];
         
-        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
         
         [twitter getUserTimelineWithScreenName:vc.screenName count:20 successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {
@@ -73,25 +73,25 @@
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
         
         NSString *lastTweetId = [[vc.tweets lastObject] identifier];
         
-        [twitter getUserTimelineWithScreenName:vc.screenName maxId:lastTweetId count:20 successBlock:^(NSArray *statuses) {
+        [twitter getUserTimelineWithScreenName:vc.screenName sinceID:nil maxID:lastTweetId count:20 successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {
                 if (![lastTweetId isEqualToString:[dictionary objectForKey:@"id_str"]]) {
                     TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
                     [vc.tweets addObject:tweet];
                 }
             }
-            
+
             [vc.tableView reloadData];
             
             [vc.tableView.infiniteScrollingView stopAnimating];
         } errorBlock:^(NSError *error) {
             //TODO: deu problema, e ai?
             NSLog(@"deu xabu: %@", [error description]);
-            
+
             [vc.tableView.pullToRefreshView stopAnimating];
         }];
     }];

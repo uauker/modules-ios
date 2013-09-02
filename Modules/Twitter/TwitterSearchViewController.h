@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STTwitterAPIWrapper.h"
+#import "STTwitterAPI.h"
 #import "TweetCustomCell.h"
 #import "TTTweet+Parse.h"
 #import "UIScrollView+SVPullToRefresh.h"

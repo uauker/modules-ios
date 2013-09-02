@@ -8,21 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol STTwitterOAuthProtocol <NSObject>
+@protocol STTwitterProtocol <NSObject>
 
 - (BOOL)canVerifyCredentials;
 - (void)verifyCredentialsWithSuccessBlock:(void(^)(NSString *username))successBlock
                                errorBlock:(void(^)(NSError *error))errorBlock;
 
-- (void)getResource:(NSString *)resource
-         parameters:(NSDictionary *)params
-       successBlock:(void(^)(id response))successBlock
-         errorBlock:(void(^)(NSError *error))errorBlock;
-
-- (void)postResource:(NSString *)resource
-          parameters:(NSDictionary *)params
-        successBlock:(void(^)(id response))successBlock
-          errorBlock:(void(^)(NSError *error))errorBlock;
+- (void)fetchResource:(NSString *)resource
+           HTTPMethod:(NSString *)HTTPMethod
+        baseURLString:(NSString *)baseURLString
+           parameters:(NSDictionary *)params
+        progressBlock:(void(^)(id response))progressBlock
+         successBlock:(void(^)(id response))successBlock
+           errorBlock:(void(^)(NSError *error))errorBlock;
 
 @optional
 
@@ -37,9 +35,19 @@
 - (void)invalidateBearerTokenWithSuccessBlock:(void(^)())successBlock
                                    errorBlock:(void(^)(NSError *error))errorBlock;
 
+// access tokens are available only with plain OAuth authentication
 - (NSString *)oauthAccessToken;
 - (NSString *)oauthAccessTokenSecret;
 
 - (NSString *)bearerToken;
+
+// reverse auth phase 1, implemented only in STTwitterOAuth
+- (void)postReverseOAuthTokenRequest:(void(^)(NSString *authenticationHeader))successBlock
+                          errorBlock:(void(^)(NSError *error))errorBlock;
+
+// reverse auth phase 2, implemented only in STTwitterOS
+- (void)postReverseAuthAccessTokenWithAuthenticationHeader:(NSString *)authenticationHeader
+                                              successBlock:(void(^)(NSString *oAuthToken, NSString *oAuthTokenSecret, NSString *userID, NSString *screenName))successBlock
+                                                errorBlock:(void(^)(NSError *error))errorBlock;
 
 @end

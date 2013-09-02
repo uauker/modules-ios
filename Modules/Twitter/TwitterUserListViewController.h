@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STTwitterAPIWrapper.h"
+#import "STTwitterAPI.h"
 
 #define K_TWITTER_CONSUMER_NAME @"Trânsito Rio"
 #define K_TWITTER_CONSUMER_KEY @"WPDngmoDgU7SgRinKG5A"

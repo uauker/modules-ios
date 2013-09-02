@@ -10,7 +10,7 @@
 #import "TwitterTweetViewController.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
-#import "STTwitterAPIWrapper.h"
+#import "STTwitterAPI.h"
 #import "TTUser+Parse.h"
 #import "TTTweet+Parse.h"
 #import "TweetCustomCell.h"

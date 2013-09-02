@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+    STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
     
 //    [twitter getListWithScreenName:self.username successBlock:^(NSArray *statuses) {
 //        for (NSDictionary *dictionary in statuses) {
@@ -43,11 +43,17 @@
     
     NSLog(@"%@, %@", self.listname, self.username);
     
-    [twitter getMembersListWithListName:self.listname ownerScreenName:self.username successBlock:^(NSArray *statuses) {
-        NSLog(@"%@", [statuses description]);
+    [twitter getListsMembersForSlug:@"transito-rj" ownerScreenName:@"uauker" orOwnerID:nil cursor:nil includeEntities:@(YES) skipStatus:@(NO) successBlock:^(NSArray *users, NSString *previousCursor, NSString *nextCursor) {
+        NSLog(@"%@", [users description]);
     } errorBlock:^(NSError *error) {
-        
+        NSLog(@"error: %@", [error description]);        
     }];
+     
+//         getMembersListWithListName:self.listname ownerScreenName:self.username successBlock:^(NSArray *statuses) {
+//        NSLog(@"%@", [statuses description]);
+//    } errorBlock:^(NSError *error) {
+//        NSLog(@"error: %@", [error description]);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning

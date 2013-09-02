@@ -50,37 +50,37 @@
     [self.tableView addPullToRefreshWithActionHandler:^{
         tmpTweets = [[NSMutableArray alloc] init];
         
-        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
         
-        [twitter getUserListWithListName:vc.listname ownerScreenName:vc.username successBlock:^(NSArray *statuses) {
+        [twitter getListsStatusesForSlug:vc.listname screenName:vc.username ownerID:nil sinceID:nil maxID:nil count:nil includeEntities:@(NO) includeRetweets:@(YES) successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {
                 TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
                 [tmpTweets addObject:tweet];
             }
-            
+
             vc.tweets = tmpTweets;
-            
+
             if (vc.tweets && [vc.tweets count] > 0) {
                 [vc.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
             }
-            
+
             [vc.tableView reloadData];
-            
+
             [vc.tableView.pullToRefreshView stopAnimating];
         } errorBlock:^(NSError *error) {
             //TODO: deu problema, e ai?
             NSLog(@"deu xabu: %@", [error description]);
-            
+
             [vc.tableView.pullToRefreshView stopAnimating];
         }];        
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        STTwitterAPIWrapper *twitter = [STTwitterAPIWrapper twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
         
         NSString *lastTweetId = [[vc.tweets lastObject] identifier];
         
-        [twitter getUserListWithListName:vc.listname ownerScreenName:vc.username maxId:lastTweetId successBlock:^(NSArray *statuses) {
+        [twitter getListsStatusesForSlug:vc.listname screenName:vc.username ownerID:nil sinceID:nil maxID:lastTweetId count:nil includeEntities:@(NO) includeRetweets:@(YES) successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {
                 if (![lastTweetId isEqualToString:[dictionary objectForKey:@"id_str"]]) {
                     TTTweet *tweet = [[TTTweet alloc] initWithDictionary:dictionary];
@@ -94,7 +94,7 @@
         } errorBlock:^(NSError *error) {
             //TODO: deu problema, e ai?
             NSLog(@"deu xabu: %@", [error description]);
-            
+
             [vc.tableView.pullToRefreshView stopAnimating];
         }];
     }];
