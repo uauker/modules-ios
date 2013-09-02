@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIScrollView+SVPullToRefresh.h"
 #import "STTwitterAPI.h"
+#import "TTUser+Parse.h"
+#import "TweetCustomCell.h"
 
 #define K_TWITTER_CONSUMER_NAME @"Trânsito Rio"
 #define K_TWITTER_CONSUMER_KEY @"WPDngmoDgU7SgRinKG5A"
@@ -15,7 +18,7 @@
 #define K_TWITTER_ACCESS_TOKEN @"25685569-SSMXlJ5SQqQ56u1DuedEDyikdQG9Uxc6y6hWGJ7gg"
 #define K_TWITTER_ACCESS_TOKEN_SECRET @"Vuc8NqLOwFXLVcKGphKKuh3XZnc8M5vEj61VQMEpWQ"
 
-@interface TwitterUserListViewController : UIViewController
+@interface TwitterUserListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 // Obrigatorio
 
@@ -27,6 +30,8 @@
 
 // Privado
 
-@property (nonatomic, copy) NSString *listID;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *users;
 
 @end
