@@ -76,7 +76,7 @@
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
         
         NSString *lastTweetId = [[vc.tweets lastObject] identifier];
         
