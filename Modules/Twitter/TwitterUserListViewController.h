@@ -11,6 +11,7 @@
 #import "TwitterHelper.h"
 #import "TTUser+Parse.h"
 #import "TweetCustomCell.h"
+#import "TwitterUserTweetsViewController.h"
 
 @interface TwitterUserListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

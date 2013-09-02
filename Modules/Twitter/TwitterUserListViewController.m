@@ -119,4 +119,16 @@
     return 27 + partialCellSize;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+
+    TTUser *user = [self.users objectAtIndex:[indexPath row]];
+    
+    TwitterUserTweetsViewController *userTweetsViewController = [[TwitterUserTweetsViewController alloc] initWithNibName:@"TwitterUserTweetsViewController" bundle:nil];
+    userTweetsViewController.screenName = user.screenName;
+    userTweetsViewController.navTitle = user.name;
+    
+    [self.navigationController pushViewController:userTweetsViewController animated:YES];
+}
+
 @end
