@@ -49,8 +49,6 @@
             
             [vc.tableView reloadData];
             
-            NSLog(@">>> %d", [users count]);
-            
             [vc.tableView.pullToRefreshView stopAnimating];
         } errorBlock:^(NSError *error) {
             NSLog(@"error: %@", [error description]);
