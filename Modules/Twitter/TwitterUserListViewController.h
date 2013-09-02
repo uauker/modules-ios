@@ -28,6 +28,11 @@
 @property (nonatomic, copy) NSString *navTitle;
 
 
+// Opcional
+
+@property (nonatomic, strong) UIColor *tableBackgroundColor;
+
+
 // Privado
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

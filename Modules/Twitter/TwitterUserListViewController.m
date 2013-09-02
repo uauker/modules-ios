@@ -14,13 +14,22 @@
 
 @implementation TwitterUserListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (void)initWithVariables {
+    if (!self.tableBackgroundColor) {
+        self.tableBackgroundColor = [UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.0];
     }
-    return self;
+}
+
+- (void)loadView
+{
+    [super loadView];
+    
+    [self initWithVariables];
+    
+    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"TwitterUserListViewController" owner:self options:nil];
+    self.view = [nibObjects objectAtIndex:0];
+    
+    self.tableView = (UITableView *)[self.view viewWithTag:1];
 }
 
 - (void)viewDidLoad
