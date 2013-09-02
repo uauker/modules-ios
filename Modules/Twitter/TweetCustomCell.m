@@ -76,4 +76,38 @@
     [self.contentView addSubview:self.textView];
 }
 
+- (void)loadWithUser:(TTUser *)user {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    self.username.text = [user name];
+    
+    [self.date setHidden:YES];
+    
+    [self.imageView setImageWithURL:[NSURL URLWithString:user.profileImageUrl]];
+    self.imageView.layer.cornerRadius = 5.0;
+    self.imageView.layer.masksToBounds = YES;
+    self.imageView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.imageView.layer.borderWidth = 0.5;
+    
+    //TextView
+    if (!self.textView) {
+        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(58.0f, 23.0f, 251.0f, 100.0f)];
+        self.textView.backgroundColor = [UIColor clearColor];
+        self.textView.tag = 5;
+        self.textView.editable = NO;
+        self.textView.scrollEnabled = NO;
+        self.textView.userInteractionEnabled = NO;
+        self.textView.dataDetectorTypes = UIDataDetectorTypeNone;
+        self.textView.hidden = NO;
+    }
+    
+    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIFont systemFontOfSize:14], NSFontAttributeName,
+                                [UIColor colorWithRed:43/255.f green:46/255.f blue:47/255.f alpha:1.0], NSForegroundColorAttributeName, nil];
+    
+    self.textView.attributedText = [[NSMutableAttributedString alloc] initWithString:user.text attributes:attributes];
+    
+    [self.contentView addSubview:self.textView];
+}
+
 @end

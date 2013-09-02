@@ -86,10 +86,9 @@
     	cell = (TweetCustomCell *)[nib objectAtIndex:0];
     }
     
-//    TTTweet *tweet = [self.users objectAtIndex:[indexPath row]];
+    TTUser *user = [self.users objectAtIndex:[indexPath row]];
     
-//    [cell setTweet:tweet];
-//    [cell load];
+    [cell loadWithUser:user];
     
     //TextView
     UITextView *textView = (UITextView *)[cell viewWithTag:5];
@@ -99,6 +98,14 @@
     textView.frame = frame;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITextView *textView = (UITextView *)[cell viewWithTag:5];
+    int partialCellSize = (textView.frame.size.height < 35) ? 38 : textView.frame.size.height;
+    
+    return 27 + partialCellSize;
 }
 
 @end

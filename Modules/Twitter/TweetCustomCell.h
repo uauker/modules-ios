@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "NSDate+HumanInterval.h"
 #import "TTTweet.h"
+#import "TTUser.h"
 
 @interface TweetCustomCell : UITableViewCell
 
@@ -22,5 +23,6 @@
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 
 - (void)load;
+- (void)loadWithUser:(TTUser *)user;
 
 @end
