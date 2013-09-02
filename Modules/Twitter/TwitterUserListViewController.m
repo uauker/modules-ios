@@ -30,10 +30,12 @@
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
     
     __block TwitterUserListViewController *vc = self;
-    __block NSMutableArray *tmpUsers = [[NSMutableArray alloc] init];
+    __block NSMutableArray *tmpUsers;
     
     [self.tableView addPullToRefreshWithActionHandler:^{
         [twitter getListsMembersForSlug:self.listname ownerScreenName:self.username orOwnerID:nil cursor:nil includeEntities:@(NO) skipStatus:@(NO) successBlock:^(NSArray *users, NSString *previousCursor, NSString *nextCursor) {
+            tmpUsers = [[NSMutableArray alloc] init];
+            
             for (NSDictionary *dic in users) {
                 TTUser *user = [[TTUser alloc] initWithDictionary:dic];
                 [tmpUsers addObject:user];
