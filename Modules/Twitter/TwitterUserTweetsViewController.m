@@ -92,7 +92,7 @@
             //TODO: deu problema, e ai?
             NSLog(@"deu xabu: %@", [error description]);
 
-            [vc.tableView.pullToRefreshView stopAnimating];
+            [vc.tableView.infiniteScrollingView stopAnimating];
         }];
     }];
     
