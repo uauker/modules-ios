@@ -45,8 +45,7 @@
     __block NSMutableArray *tmpTweets;
     
     [self.tableView addPullToRefreshWithActionHandler:^{
-        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
-        
+        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
         
         [twitter getSearchTweetsWithQuery:self.searchBar.text geocode:nil lang:nil locale:@"pt-BR" resultType:nil count:nil until:nil sinceID:nil maxID:nil includeEntities:@(YES) callback:nil successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
             tmpTweets = [[NSMutableArray alloc] init];

@@ -47,7 +47,7 @@
     [self.tableView addPullToRefreshWithActionHandler:^{
         tmpTweets = [[NSMutableArray alloc] init];
         
-        STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerName:K_TWITTER_CONSUMER_NAME consumerKey:K_TWITTER_CONSUMER_KEY consumerSecret:K_TWITTER_CONSUMER_SECRET oauthToken:K_TWITTER_ACCESS_TOKEN oauthTokenSecret:K_TWITTER_ACCESS_TOKEN_SECRET];
+        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
         
         [twitter getUserTimelineWithScreenName:vc.screenName count:20 successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {

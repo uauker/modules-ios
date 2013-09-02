@@ -162,6 +162,9 @@
 		23EEF8B417D4DEEA0045AEB1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B317D4DEEA0045AEB1 /* Social.framework */; };
 		23EEF8B617D4DF0C0045AEB1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B517D4DF0C0045AEB1 /* Twitter.framework */; };
 		23EEF8B817D4DF310045AEB1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B717D4DF310045AEB1 /* Accounts.framework */; };
+		23EEF8BC17D52ACD0045AEB1 /* TwitterHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EEF8BA17D52ACD0045AEB1 /* TwitterHelper.h */; };
+		23EEF8BD17D52ACD0045AEB1 /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EEF8BB17D52ACD0045AEB1 /* TwitterHelper.m */; };
+		23EEF8BE17D52ACD0045AEB1 /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EEF8BB17D52ACD0045AEB1 /* TwitterHelper.m */; };
 		4B201DD91778FE9C00B1BF34 /* TwitterSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B201DD61778FE9C00B1BF34 /* TwitterSearchViewController.h */; };
 		4B201DDA1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */; };
 		4B201DDB1778FE9C00B1BF34 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */; };
@@ -306,6 +309,8 @@
 		23EEF8B317D4DEEA0045AEB1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		23EEF8B517D4DF0C0045AEB1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		23EEF8B717D4DF310045AEB1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		23EEF8BA17D52ACD0045AEB1 /* TwitterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterHelper.h; sourceTree = "<group>"; };
+		23EEF8BB17D52ACD0045AEB1 /* TwitterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterHelper.m; sourceTree = "<group>"; };
 		4B201DD61778FE9C00B1BF34 /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
 		4B201DD71778FE9C00B1BF34 /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TwitterSearchViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4B201DD81778FE9C00B1BF34 /* TwitterSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterSearchViewController.xib; sourceTree = "<group>"; };
@@ -585,6 +590,7 @@
 		238FF94D176AA4490080D544 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				23EEF8B917D52AA80045AEB1 /* helpers */,
 				2346A54E176BF3BE007FF38A /* models */,
 				2346A561176C155E007FF38A /* TweetCustomCell.h */,
 				2346A562176C155E007FF38A /* TweetCustomCell.m */,
@@ -674,6 +680,15 @@
 			path = Vendor;
 			sourceTree = "<group>";
 		};
+		23EEF8B917D52AA80045AEB1 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				23EEF8BA17D52ACD0045AEB1 /* TwitterHelper.h */,
+				23EEF8BB17D52ACD0045AEB1 /* TwitterHelper.m */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		4B23CBB7177786AA004DA2EF /* modules-ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +750,7 @@
 				23EEF8AC17D4DC940045AEB1 /* STTwitterOS.h in Headers */,
 				23EEF8AF17D4DC940045AEB1 /* STTwitterProtocol.h in Headers */,
 				23EEF8B017D4DC940045AEB1 /* STHTTPRequest.h in Headers */,
+				23EEF8BC17D52ACD0045AEB1 /* TwitterHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +964,7 @@
 				23EEF8AA17D4DC940045AEB1 /* STTwitterOAuth.m in Sources */,
 				23EEF8AD17D4DC940045AEB1 /* STTwitterOS.m in Sources */,
 				23EEF8B117D4DC940045AEB1 /* STHTTPRequest.m in Sources */,
+				23EEF8BD17D52ACD0045AEB1 /* TwitterHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1008,7 @@
 				23EEF8AB17D4DC940045AEB1 /* STTwitterOAuth.m in Sources */,
 				23EEF8AE17D4DC940045AEB1 /* STTwitterOS.m in Sources */,
 				23EEF8B217D4DC940045AEB1 /* STHTTPRequest.m in Sources */,
+				23EEF8BE17D52ACD0045AEB1 /* TwitterHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
