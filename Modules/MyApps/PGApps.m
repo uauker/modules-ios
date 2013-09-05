@@ -19,6 +19,7 @@
         self.category = [dictionary objectForKey:@"category"];
         self.bundle = [dictionary objectForKey:@"bundle"];
         self.url = [dictionary objectForKey:@"url"];
+        self.active = ([[dictionary objectForKey:@"active"] boolValue]);
     }
     
     return self;

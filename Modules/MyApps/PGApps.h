@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *bundle;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic) BOOL *active;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
