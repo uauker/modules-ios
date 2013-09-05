@@ -45,7 +45,7 @@
     __block NSMutableArray *tmpTweets;
     
     [self.tableView addPullToRefreshWithActionHandler:^{
-        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
+        STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
         
         [twitter getSearchTweetsWithQuery:self.searchBar.text geocode:nil lang:nil locale:@"pt-BR" resultType:nil count:nil until:nil sinceID:nil maxID:nil includeEntities:@(NO) callback:nil successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
             tmpTweets = [[NSMutableArray alloc] init];
@@ -68,7 +68,7 @@
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
+        STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
         
         NSString *lastTweetId = [[vc.tweets lastObject] identifier];
         

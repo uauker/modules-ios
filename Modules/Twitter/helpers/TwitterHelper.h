@@ -15,8 +15,18 @@
 #define K_TWITTER_ACCESS_TOKEN @"25685569-SSMXlJ5SQqQ56u1DuedEDyikdQG9Uxc6y6hWGJ7gg"
 #define K_TWITTER_ACCESS_TOKEN_SECRET @"Vuc8NqLOwFXLVcKGphKKuh3XZnc8M5vEj61VQMEpWQ"
 
-@interface TwitterHelper : NSObject
+@interface TwitterHelper : NSObject {
+}
 
-+ (STTwitterAPI *)instanceAPI;
+@property (nonatomic, copy) NSString *consumerName;
+@property (nonatomic, copy) NSString *consumerKey;
+@property (nonatomic, copy) NSString *consumerSecret;
+@property (nonatomic, copy) NSString *accessToken;
+@property (nonatomic, copy) NSString *accessTokenSecret;
+
+
++ (TwitterHelper *)sharedInstance;
+
+- (STTwitterAPI *)api;
 
 @end

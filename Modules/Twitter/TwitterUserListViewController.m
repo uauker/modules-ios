@@ -38,7 +38,7 @@
     
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
-    STTwitterAPI *twitter = [TwitterHelper instanceAPI];
+    STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
     
     __block TwitterUserListViewController *vc = self;
     __block NSMutableArray *tmpUsers;

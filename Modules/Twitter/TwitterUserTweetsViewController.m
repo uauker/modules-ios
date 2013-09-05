@@ -47,7 +47,7 @@
     [self.tableView addPullToRefreshWithActionHandler:^{
         tmpTweets = [[NSMutableArray alloc] init];
         
-        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
+        STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
         
         [twitter getUserTimelineWithScreenName:vc.screenName count:20 successBlock:^(NSArray *statuses) {
             for (NSDictionary *dictionary in statuses) {
@@ -73,7 +73,7 @@
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        STTwitterAPI *twitter = [TwitterHelper instanceAPI];
+        STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
         
         NSString *lastTweetId = [[vc.tweets lastObject] identifier];
         
