@@ -10,8 +10,6 @@
 
 @interface NSString (PGString)
 
-+ (BOOL)isThereLink:(NSString *)string;
-
 - (BOOL)containsString:(NSString*)substring;
 
 + (NSString *)trim:(NSString *)string;
