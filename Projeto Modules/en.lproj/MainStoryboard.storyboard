@@ -76,6 +76,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="listname" value="transito-rj"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="username" value="uauker"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="navTitle" value="Contas"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zC-KE-4cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,6 +237,9 @@
         </class>
         <class className="TwitterUserListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterUserListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

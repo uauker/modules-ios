@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationItem setTitle:self.navTitle];
+    
     [[self tableView] setBackgroundColor:self.tableBackgroundColor];
     
     STTwitterAPI *twitter = [[TwitterHelper sharedInstance] api];
