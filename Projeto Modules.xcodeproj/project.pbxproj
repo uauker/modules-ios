@@ -109,6 +109,12 @@
 		232E878F1777C2C000438194 /* TwitterUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232E86EF177678A100438194 /* TwitterUserListViewController.m */; };
 		232E87901777C2C000438194 /* PGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5B175A303C00C5CDC4 /* PGNews.m */; };
 		232E87911777C2C000438194 /* TelaDeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232C4E5F175A303C00C5CDC4 /* TelaDeNewsViewController.m */; };
+		23445B5317D933D0009C992D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B717D4DF310045AEB1 /* Accounts.framework */; };
+		23445B5417D933D6009C992D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B317D4DEEA0045AEB1 /* Social.framework */; };
+		23445B5517D933DD009C992D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EEF8B517D4DF0C0045AEB1 /* Twitter.framework */; };
+		23445B5617D9343B009C992D /* NSString+PGString.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D1BBCD1773959B005A1B2C /* NSString+PGString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23445B5717D9343B009C992D /* NSDate+PGDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E12175A2FE700C5CDC4 /* NSDate+PGDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23445B5817D9343B009C992D /* TSMiniWebBrowser+PGBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 232C4E14175A2FE700C5CDC4 /* TSMiniWebBrowser+PGBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2346A559176BF44B007FF38A /* TTTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A556176BF44B007FF38A /* TTTweet.m */; };
 		2346A55A176BF44B007FF38A /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A558176BF44B007FF38A /* TTUser.m */; };
 		2346A55D176BF751007FF38A /* TTUser+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2346A55C176BF751007FF38A /* TTUser+Parse.m */; };
@@ -342,6 +348,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23445B5517D933DD009C992D /* Twitter.framework in Frameworks */,
+				23445B5417D933D6009C992D /* Social.framework in Frameworks */,
+				23445B5317D933D0009C992D /* Accounts.framework in Frameworks */,
 				232E87001777ACF800438194 /* UIKit.framework in Frameworks */,
 				4B23CC101777A7AD004DA2EF /* SDWebImage.framework in Frameworks */,
 				232E86FC1777ACE200438194 /* SystemConfiguration.framework in Frameworks */,
@@ -714,7 +723,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232E87051777ADAD00438194 /* EGOCache+PGCache.h in Headers */,
 				232E87071777ADAD00438194 /* EGOCache.h in Headers */,
 				4B23CBC117778709004DA2EF /* TTTweet.h in Headers */,
 				4B23CBC217778709004DA2EF /* TTUser.h in Headers */,
@@ -737,6 +745,10 @@
 				232E87741777C17900438194 /* TwitterUserTweetsViewController.h in Headers */,
 				232E87751777C17900438194 /* TwitterUserListViewController.h in Headers */,
 				232E87761777C17900438194 /* PGNews.h in Headers */,
+				23445B5617D9343B009C992D /* NSString+PGString.h in Headers */,
+				232E87051777ADAD00438194 /* EGOCache+PGCache.h in Headers */,
+				23445B5717D9343B009C992D /* NSDate+PGDate.h in Headers */,
+				23445B5817D9343B009C992D /* TSMiniWebBrowser+PGBrowser.h in Headers */,
 				232E87771777C17900438194 /* TelaDeNewsViewController.h in Headers */,
 				232E87551777BC9C00438194 /* NSString+MD5.h in Headers */,
 				4B201DD91778FE9C00B1BF34 /* TwitterSearchViewController.h in Headers */,
@@ -972,9 +984,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232E87781777C2C000438194 /* NSString+PGString.m in Sources */,
-				232E87791777C2C000438194 /* NSDate+PGDate.m in Sources */,
-				232E877A1777C2C000438194 /* TSMiniWebBrowser+PGBrowser.m in Sources */,
 				232E877B1777C2C000438194 /* TTTAttributedLabel.m in Sources */,
 				232E877C1777C2C000438194 /* TwitterText.m in Sources */,
 				232E877D1777C2C000438194 /* TwitterTextEntity.m in Sources */,
@@ -995,7 +1004,6 @@
 				232E870C1777B1B400438194 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				232E870E1777B1B400438194 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				232E87091777B0CD00438194 /* PGApps.m in Sources */,
-				232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */,
 				232E87081777ADAD00438194 /* EGOCache.m in Sources */,
 				4B23CBCA1777900E004DA2EF /* JSONKit.m in Sources */,
 				232E86F81777952D00438194 /* MyAppsViewController.m in Sources */,
@@ -1009,6 +1017,10 @@
 				23EEF8AE17D4DC940045AEB1 /* STTwitterOS.m in Sources */,
 				23EEF8B217D4DC940045AEB1 /* STHTTPRequest.m in Sources */,
 				23EEF8BE17D52ACD0045AEB1 /* TwitterHelper.m in Sources */,
+				232E87781777C2C000438194 /* NSString+PGString.m in Sources */,
+				232E87061777ADAD00438194 /* EGOCache+PGCache.m in Sources */,
+				232E87791777C2C000438194 /* NSDate+PGDate.m in Sources */,
+				232E877A1777C2C000438194 /* TSMiniWebBrowser+PGBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
