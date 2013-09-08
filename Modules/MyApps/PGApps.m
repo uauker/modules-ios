@@ -25,4 +25,25 @@
     return self;
 }
 
+- (void) encodeWithCoder:(NSCoder*)encoder {
+    [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeObject:self.icon forKey:@"icon"];
+    [encoder encodeObject:self.category forKey:@"category"];
+    [encoder encodeObject:self.bundle forKey:@"bundle"];
+    [encoder encodeObject:self.url forKey:@"url"];    
+    [encoder encodeBool:*(self.active) forKey:@"active"];
+}
+
+- (id) initWithCoder:(NSCoder*)decoder {
+    if (self = [super init]) {
+        self.name = [decoder decodeObjectForKey:@"name"];
+        self.icon = [decoder decodeObjectForKey:@"icon"];
+        self.category = [decoder decodeObjectForKey:@"category"];
+        self.bundle = [decoder decodeObjectForKey:@"bundle"];
+        self.url = [decoder decodeObjectForKey:@"url"];
+        self.active = [decoder decodeBoolForKey:@"active"];
+    }
+    return self;
+}
+
 @end

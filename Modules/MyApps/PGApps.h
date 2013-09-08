@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PGApps : NSObject
+@interface PGApps : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *icon;
