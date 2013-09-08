@@ -11,7 +11,6 @@
 #import "JSONKit.h"
 
 typedef void(^PGCacheCallback)(NSString *content, BOOL isNew, NSError *error);
-typedef void(^PGCacheYQLCallback)(NSString *content, BOOL isNew, NSDate *createdAt, NSError *error);
 
 @interface EGOCache (PGCache)
 
