@@ -57,11 +57,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="07f-gh-n9l" kind="relationship" relationship="viewControllers" id="27"/>
                         <segue destination="yAX-hA-G7E" kind="relationship" relationship="viewControllers" id="Qfb-55-HN8"/>
                         <segue destination="tZG-ba-3x8" kind="relationship" relationship="viewControllers" id="EOd-KY-BS1"/>
                         <segue destination="Jyx-9k-JOS" kind="relationship" relationship="viewControllers" id="0NR-VF-xgT"/>
                         <segue destination="UEJ-Sc-qtT" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="07f-gh-n9l" kind="relationship" relationship="viewControllers" id="27"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>

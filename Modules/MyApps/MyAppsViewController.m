@@ -60,7 +60,7 @@
                     for (NSDictionary *item in [dic objectForKey:@"apps"]) {
                         PGApps *app = [[PGApps alloc] initWithDictionary:item];
                         
-                        if (![[[NSBundle mainBundle] bundleIdentifier] isEqualToString:app.bundle] && app.active) {
+                        if (![[[NSBundle mainBundle] bundleIdentifier] isEqualToString:app.bundle] && [app isActived]) {
                             [tmpAppsArray addObject:app];
                         }
                     }

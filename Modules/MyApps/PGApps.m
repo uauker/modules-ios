@@ -19,10 +19,14 @@
         self.category = [dictionary objectForKey:@"category"];
         self.bundle = [dictionary objectForKey:@"bundle"];
         self.url = [dictionary objectForKey:@"url"];
-        self.active = ([[dictionary objectForKey:@"active"] boolValue]);
+        self.active = [dictionary objectForKey:@"active"];
     }
     
     return self;
+}
+
+- (BOOL)isActived {
+    return [self.active boolValue];
 }
 
 - (void) encodeWithCoder:(NSCoder*)encoder {
@@ -31,7 +35,7 @@
     [encoder encodeObject:self.category forKey:@"category"];
     [encoder encodeObject:self.bundle forKey:@"bundle"];
     [encoder encodeObject:self.url forKey:@"url"];    
-    [encoder encodeBool:*(self.active) forKey:@"active"];
+//    [encoder encodeBool:*(self.active) forKey:@"active"];
 }
 
 - (id) initWithCoder:(NSCoder*)decoder {
@@ -41,7 +45,7 @@
         self.category = [decoder decodeObjectForKey:@"category"];
         self.bundle = [decoder decodeObjectForKey:@"bundle"];
         self.url = [decoder decodeObjectForKey:@"url"];
-        self.active = [decoder decodeBoolForKey:@"active"];
+//        self.active = [decoder decodeBoolForKey:@"active"];
     }
     return self;
 }
