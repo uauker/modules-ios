@@ -34,8 +34,8 @@
     [encoder encodeObject:self.icon forKey:@"icon"];
     [encoder encodeObject:self.category forKey:@"category"];
     [encoder encodeObject:self.bundle forKey:@"bundle"];
-    [encoder encodeObject:self.url forKey:@"url"];    
-//    [encoder encodeBool:*(self.active) forKey:@"active"];
+    [encoder encodeObject:self.url forKey:@"url"];
+    [encoder encodeObject:self.active forKey:@"active"];
 }
 
 - (id) initWithCoder:(NSCoder*)decoder {
@@ -45,7 +45,7 @@
         self.category = [decoder decodeObjectForKey:@"category"];
         self.bundle = [decoder decodeObjectForKey:@"bundle"];
         self.url = [decoder decodeObjectForKey:@"url"];
-//        self.active = [decoder decodeBoolForKey:@"active"];
+        self.active = [decoder decodeObjectForKey:@"active"];
     }
     return self;
 }
