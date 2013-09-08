@@ -14,12 +14,12 @@
     return [[EGOCache globalCache] hasCacheForKey:[url MD5Hash]];
 }
 
-+ (void)setUrl:(NSString *)url withTimeoutInterval:(NSTimeInterval)interval onSuccessPerform:(PGCacheCallback)callback {
++ (void)setUrl:(NSString *)url withTimeoutInterval:(NSTimeInterval)interval onSuccessPerform:(PGSimpleCacheCallback)callback {
     NSString *key = [url MD5Hash];
     [EGOCache setUrl:url forKey:key withTimeoutInterval:interval onSuccessPerform:callback];
 }
 
-+ (void)setUrl:(NSString *)url forKey:(NSString *)key withTimeoutInterval:(NSTimeInterval)interval onSuccessPerform:(PGCacheCallback)callback {
++ (void)setUrl:(NSString *)url forKey:(NSString *)key withTimeoutInterval:(NSTimeInterval)interval onSuccessPerform:(PGSimpleCacheCallback)callback {
     NSString *source = @"";
     NSError *error = nil;
     BOOL isNew = NO;
